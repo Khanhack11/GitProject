@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS flex-basis - Khánh Bán Bơ Chill</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h2>Thực hành: CSS flex-basis</h2>
+    <p>Thuộc tính này quy định kích thước gốc (width hoặc height) của phần tử nằm trong Flexbox.</p>
+
+    <h3>Ví dụ 1: flex-basis với độ dài cụ thể (px)</h3>
+    <p>Sử dụng <code>flex-basis: 200px;</code>. Dù tên món dài hay ngắn, chúng đều khởi điểm bằng nhau là 200px.</p>
+    <div class="flex-container">
+        <div class="flex-item basis-pixel">Bơ</div>
+        <div class="flex-item basis-pixel">Nước dừa tươi siêu mát lạnh</div>
+        <div class="flex-item basis-pixel">Trà Nhài</div>
+    </div>
+
+    <h3>Ví dụ 2: flex-basis: auto (Mặc định)</h3>
+    <p>Sử dụng <code>flex-basis: auto;</code>. Kích thước ban đầu sẽ phụ thuộc vào độ dài của đoạn chữ bên trong. Chữ càng dài, ô chứa càng to.</p>
+    <div class="flex-container">
+        <div class="flex-item basis-auto">Bơ</div>
+        <div class="flex-item basis-auto">Nước dừa tươi siêu mát lạnh</div>
+        <div class="flex-item basis-auto">Trà Nhài</div>
+    </div>
+</body>
+</html>

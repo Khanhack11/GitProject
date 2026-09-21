@@ -1,0 +1,48 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f6f7;
+    padding: 20px;
+    line-height: 1.5;
+    color: #333;
+}
+
+h3 {
+    color: #27ae60;
+    margin-top: 30px;
+}
+
+/* Khung Flexbox chứa các phần tử */
+.flex-container {
+    display: flex;
+    background-color: #fff;
+    border: 2px dashed #bdc3c7;
+    padding: 15px;
+    gap: 15px; /* Tạo khoảng hở giữa các ô */
+}
+
+/* Định dạng cơ bản cho các ô bên trong */
+.flex-item {
+    background-color: #d5f5e3;
+    border: 1px solid #27ae60;
+    padding: 15px;
+    font-weight: bold;
+    color: #2c3e50;
+    text-align: center;
+    border-radius: 5px;
+}
+
+/* --- THỰC HÀNH FLEX-BASIS --- */
+
+/* Đặt kích thước ban đầu cố định là 200px */
+.basis-pixel {
+    flex-basis: 200px; 
+}
+
+/* Để tự động co giãn theo độ dài của chữ (Mặc định) */
+.basis-auto {
+    flex-basis: auto; 
+}
