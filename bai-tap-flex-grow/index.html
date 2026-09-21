@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS flex-grow - Khánh Bán Bơ Chill</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h2>Thực hành: CSS flex-grow</h2>
+    <p>Dưới đây là một khung Flexbox chứa 5 món đồ uống. Bốn món chỉ có kích thước vừa đủ để chứa chữ. Riêng món thứ 2 được gắn thuộc tính <code>flex-grow: 1;</code> nên nó đã tự động phình to ra để lấp đầy toàn bộ khoảng trống còn thừa của khung.</p>
+
+    <div class="flex-container">
+        <div class="flex-item">Bơ sáp</div>
+        
+        <!-- Khối thứ 2 được gắn class đặc biệt để áp dụng flex-grow -->
+        <div class="flex-item item-grow">Nước dừa tươi (flex-grow: 1)</div>
+        
+        <div class="flex-item">Trà Shan Tuyết</div>
+        <div class="flex-item">Trà Nhài</div>
+        <div class="flex-item">Sữa chua</div>
+    </div>
+</body>
+</html>

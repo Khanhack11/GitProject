@@ -1,0 +1,45 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f6f7;
+    padding: 20px;
+    line-height: 1.6;
+    color: #333;
+}
+
+h2 {
+    color: #27ae60;
+}
+
+/* Khung Flexbox bọc ngoài */
+.flex-container {
+    display: flex;
+    background-color: #fff;
+    border: 2px dashed #bdc3c7;
+    padding: 15px;
+    gap: 10px; /* Khoảng hở giữa các phần tử */
+}
+
+/* Định dạng cơ bản cho 5 khối */
+.flex-item {
+    background-color: #d5f5e3;
+    border: 1px solid #27ae60;
+    padding: 20px;
+    font-weight: bold;
+    color: #2c3e50;
+    text-align: center;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* --- THỰC HÀNH FLEX-GROW --- */
+.item-grow {
+    flex-grow: 1; /* Chiếm toàn bộ không gian trống còn lại */
+    background-color: #f1c40f; /* Đổi sang màu vàng cho dễ phân biệt */
+    border-color: #f39c12;
+}
