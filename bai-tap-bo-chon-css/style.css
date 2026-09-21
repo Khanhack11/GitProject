@@ -1,0 +1,51 @@
+/* 1. Bộ chọn thẻ (Element selector): Đổi màu nền trang web */
+body {
+    background-color: #f4f6f7;
+}
+
+/* 2. Bộ chọn nhóm (Grouping selector): Định dạng chung font chữ cho cả h1 và p */
+h1, p {
+    font-family: Arial, sans-serif;
+}
+
+/* 3. Bộ chọn ID (ID selector): Căn giữa tiêu đề chính */
+#tieu-de-chinh {
+    text-align: center;
+    color: #2c3e50;
+}
+
+/* 4. Bộ chọn Class (Class selector): Định dạng danh sách với các màu sắc khác nhau */
+.danh-sach-so-thich {
+    font-weight: bold;
+    list-style-type: square;
+}
+
+.muc-xanh-la {
+    color: #27ae60;
+}
+
+.muc-xanh-duong {
+    color: #2980b9;
+}
+
+.muc-cam {
+    color: #d35400;
+}
+
+/* Định dạng cơ bản cho nút bấm */
+.nut-bam {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 15px;
+}
+
+/* 5. Bộ chọn trạng thái (Pseudo-class selector): Đổi màu khi di chuột qua nút (hover) */
+.nut-bam:hover {
+    background-color: #45a049;
+    transform: scale(1.05); /* Phóng to một chút khi di chuột vào */
+}
