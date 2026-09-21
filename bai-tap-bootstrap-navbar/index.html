@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap Navbar - Khánh Bán Bơ Chill</title>
+    
+    <!-- Nhúng thư viện CSS của Bootstrap từ mạng (CDN) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+</head>
+<body>
+
+    <!-- Tạo Navbar Bootstrap: Nền xanh lá (bg-success), chữ trắng (navbar-dark), bóng đổ (shadow) -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-success shadow">
+        <div class="container-fluid">
+            
+            <!-- Tên quán -->
+            <a class="navbar-brand fw-bold" href="#">🥑 Khánh Bán Bơ Chill</a>
+            
+            <!-- Nút Toggler (Nút 3 gạch) sẽ tự động hiện ra trên màn hình điện thoại -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <!-- Các mục menu -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <!-- Lớp ms-auto giúp đẩy toàn bộ menu sang góc phải màn hình -->
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" href="#">Trang chủ</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Giới thiệu</a></li>
+                    
+                    <!-- Menu con (Dropdown) cho Thực đơn -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Thực đơn</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Sinh tố bơ sáp</a></li>
+                            <li><a class="dropdown-item" href="#">Nước dừa tươi</a></li>
+                            <li><hr class="dropdown-divider"></li> <!-- Đường gạch ngang phân cách -->
+                            <li><a class="dropdown-item" href="#">Trà Shan Tuyết</a></li>
+                        </ul>
+                    </li>
+                    
+                    <li class="nav-item"><a class="nav-link" href="#">Liên hệ</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Khối nội dung giới thiệu -->
+    <div class="container mt-5 text-center">
+        <h1 class="text-success">Chào mừng sinh viên ICTU!</h1>
+        <p class="lead">Hãy thử thu nhỏ màn hình trình duyệt. Bạn sẽ thấy Navbar tự động chuyển thành nút menu "hamburger" cực kỳ xịn xò mà không cần bạn phải tự viết một dòng CSS nào.</p>
+    </div>
+
+    <!-- Nhúng thư viện JavaScript của Bootstrap để nút Dropdown và nút Toggler trên điện thoại hoạt động được -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+</body>
+</html>
