@@ -1,0 +1,126 @@
+/* Thiết lập cơ bản */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f6f7;
+    line-height: 1.6;
+}
+
+/* --- THIẾT LẬP LƯỚI CHO MÀN HÌNH MÁY TÍNH (Desktop) --- */
+.grid-container {
+    display: grid;
+    /* Cột trái chiếm 3 phần (cho nội dung chính), cột phải chiếm 1 phần (cho sidebar) */
+    grid-template-columns: 3fr 1fr;
+    
+    /* VẼ SƠ ĐỒ BỐ CỤC */
+    grid-template-areas:
+        "header header"
+        "nav nav"
+        "main sidebar"
+        "footer footer";
+        
+    gap: 15px; /* Khoảng cách giữa các khối */
+    max-width: 1000px;
+    margin: 20px auto;
+    padding: 0 15px;
+}
+
+/* Gắn tên và trang trí từng khu vực */
+.header {
+    grid-area: header;
+    background-color: #27ae60;
+    color: white;
+    padding: 30px;
+    text-align: center;
+    border-radius: 8px;
+}
+
+.nav {
+    grid-area: nav;
+    background-color: #34495e;
+    padding: 10px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.nav a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    display: inline-block;
+    font-weight: bold;
+}
+
+.nav a:hover {
+    background-color: #f1c40f;
+    color: #333;
+    border-radius: 4px;
+}
+
+.main-content {
+    grid-area: main;
+    background-color: white;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.main-content h2 {
+    color: #27ae60;
+    margin-bottom: 15px;
+}
+
+.sidebar {
+    grid-area: sidebar;
+    background-color: #ecf0f1;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.sidebar ul {
+    list-style: none;
+    margin-top: 15px;
+}
+
+.sidebar li {
+    margin-bottom: 10px;
+    color: #c0392b;
+    font-weight: bold;
+}
+
+.footer {
+    grid-area: footer;
+    background-color: #2c3e50;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+/* --- THIẾT LẬP LƯỚI CHO ĐIỆN THOẠI (Mobile < 768px) --- */
+@media (max-width: 768px) {
+    .grid-container {
+        /* Chuyển thành 1 cột duy nhất */
+        grid-template-columns: 1fr;
+        
+        /* Vẽ lại sơ đồ: Xếp dọc từ trên xuống dưới */
+        grid-template-areas:
+            "header"
+            "nav"
+            "main"
+            "sidebar"
+            "footer";
+    }
+    
+    /* Trên điện thoại, các nút menu nên trải dài xuống thành từng dòng cho dễ bấm */
+    .nav a {
+        display: block;
+        border-bottom: 1px solid #2c3e50;
+    }
+}
