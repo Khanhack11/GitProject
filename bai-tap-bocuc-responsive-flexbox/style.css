@@ -1,0 +1,120 @@
+/* Reset CSS để xóa khoảng cách mặc định của trình duyệt */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f3f4;
+}
+
+/* Khung bọc toàn trang, dùng Flexbox xếp dọc */
+.container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.header {
+    background-color: #27ae60;
+    color: white;
+    text-align: center;
+    padding: 30px 20px;
+}
+
+/* Thanh menu dùng Flexbox để căn giữa các nút */
+.nav {
+    background-color: #2c3e50;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.nav a {
+    color: white;
+    text-decoration: none;
+    padding: 15px 25px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.nav a:hover {
+    background-color: #f39c12;
+}
+
+/* Khối chứa Nội dung chính & Sidebar, xếp ngang trên máy tính */
+.main-wrapper {
+    display: flex;
+    flex: 1; /* Tự động dãn ra chiếm phần không gian trống */
+    width: 100%;
+    max-width: 1100px;
+    margin: 20px auto;
+    padding: 0 15px;
+    gap: 20px;
+}
+
+/* Nội dung chính chiếm 7 phần */
+.content {
+    flex: 7;
+    background-color: #fff;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    line-height: 1.6;
+    color: #333;
+}
+
+.content h2 {
+    color: #27ae60;
+    margin-bottom: 15px;
+}
+
+/* Sidebar chiếm 3 phần */
+.sidebar {
+    flex: 3;
+    background-color: #fff;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    border-top: 4px solid #f39c12;
+}
+
+.sidebar h3 {
+    color: #d35400;
+    margin-bottom: 15px;
+}
+
+.sidebar ul {
+    list-style: none;
+    line-height: 2;
+    color: #555;
+    font-weight: bold;
+}
+
+.footer {
+    background-color: #2c3e50;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: auto; /* Ép footer luôn nằm ở đáy màn hình */
+}
+
+/* --- RESPONSIVE CHO THIẾT BỊ DI ĐỘNG (< 768px) --- */
+@media (max-width: 768px) {
+    /* Ép khối wrapper xếp dọc (column) thay vì xếp ngang */
+    .main-wrapper {
+        flex-direction: column;
+    }
+    
+    /* Các nút menu cũng xếp dọc và tràn 100% chiều ngang */
+    .nav {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .nav a {
+        border-bottom: 1px solid #34495e;
+    }
+}
