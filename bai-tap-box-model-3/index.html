@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Thực hành Box Model 3</title>
+    <style>
+        /* Khối div tổng chứa 2 khối nhỏ */
+        #demo {
+           width: 350px;
+           display: flex; /* Xếp các phần tử con nằm ngang hàng nhau */
+           float: left;
+           border: 6px solid black;
+           border-radius: 6%;
+           padding: 20px 0; /* Thêm một chút padding để các khối bên trong không chạm sát viền trên/dưới */
+        }
+        
+        /* Định dạng khối nhỏ thứ nhất (viền xanh) */
+        .d1 {
+           margin-left: 20px;
+           width: 150px;
+           height: 80px;
+           box-shadow: 0 0 0 4px mediumslateblue;
+           box-sizing: border-box; /* Giữ nguyên kích thước 150x80 dù có thêm viền/padding */
+           border-radius: 36%; /* Bo tròn thành hình bầu dục */
+        }
+        
+        /* Định dạng khối nhỏ thứ hai (viền đỏ đô) */
+        .d2 {
+           width: 150px;
+           height: 80px;
+           padding: 30px;
+           box-shadow: 0 0 0 4px darkred;
+           box-sizing: border-box; /* Ép phần padding 30px thụt vào trong, không làm phình to khối */
+           border-radius: 36%;
+        }
+    </style>
+</head>
+<body>
+    <h2>Thực hành Box Model 3: Box-Sizing</h2>
+    
+    <div id="demo">
+        <div class="d1"></div>
+        <div class="d2"></div>
+    </div>
+</body>
+</html>
