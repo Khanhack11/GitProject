@@ -1,0 +1,54 @@
+/* Định dạng chung */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Thanh điều hướng bám dính (Sticky) */
+.sticky-menu {
+    position: sticky; /* Lệnh quan trọng nhất để menu bám dính */
+    top: 0; /* Bám sát mép trên cùng của màn hình */
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    width: 100%;
+    z-index: 1000; /* Đảm bảo menu luôn nổi lên trên các nội dung khác */
+}
+
+.sticky-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.sticky-menu ul li {
+    margin: 0 15px;
+}
+
+.sticky-menu ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px;
+    display: block;
+}
+
+.sticky-menu ul li a:hover {
+    background-color: #575757;
+    border-radius: 5px;
+}
+
+/* Nội dung trang web */
+section {
+    padding: 100px 20px;
+    height: 100vh; /* Thiết lập chiều cao bằng 100% màn hình để tạo không gian cuộn chuột */
+}
+
+#home { background-color: #f4f4f4; }
+#about { background-color: #ddd; }
+#menu { background-color: #bbb; }
+#contact { background-color: #999; }
