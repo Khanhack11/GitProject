@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Nhúng CSS vào HTML</title>
+
+    <!-- PHẦN 3: EXTERNAL STYLE (Nhúng từ file style.css bên ngoài) -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- PHẦN 2: INTERNAL STYLE (Viết CSS trực tiếp bên trong thẻ style) -->
+    <style>
+        h1.internal { color: green; }
+        p.internal { color: purple; }
+    </style>
+</head>
+<body>
+
+    <!-- PHẦN 1: INLINE STYLE (Viết CSS trực tiếp ngay trên thẻ HTML) -->
+    <h1 style="color: red;">Phần 1: Inline Style</h1>
+    <p style="color: orange;">Đoạn văn này được định dạng màu sắc bằng Inline Style trực tiếp trên thẻ.</p>
+
+    <hr>
+
+    <!-- PHẦN 2: INTERNAL STYLE (Sử dụng CSS từ thẻ <style> ở trên) -->
+    <h1 class="internal">Phần 2: Internal Style</h1>
+    <p class="internal">Đoạn văn này được định dạng màu sắc bằng Internal Style (nằm trong phần head).</p>
+
+    <hr>
+
+    <!-- PHẦN 3: EXTERNAL STYLE (Sử dụng CSS từ file style.css bên ngoài) -->
+    <h1 class="external">Phần 3: External Style</h1>
+    <p class="external">Đoạn văn này được định dạng màu sắc bằng External Style (liên kết với file style.css riêng).</p>
+
+</body>
+</html>

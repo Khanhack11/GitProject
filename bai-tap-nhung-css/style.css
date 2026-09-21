@@ -1,0 +1,9 @@
+/* CSS dành riêng cho Phần 3: External Style */
+h1.external {
+    color: blue;
+}
+
+p.external {
+    color: darkcyan;
+    font-weight: bold;
+}
