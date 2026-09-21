@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng Ký Thành Viên - Khánh Bán Bơ Chill</title>
+    <!-- Nhúng CSS của Bootstrap 5.3 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <!-- Nhúng Font Awesome để trang trí icon cho form -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-light d-flex flex-column min-vh-100">
+
+    <!-- 1. NAVBAR -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-success shadow-sm">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#"><i class="fas fa-mug-hot me-2"></i> Khánh Bán Bơ Chill</a>
+            <div class="ms-auto">
+                <a href="#" class="btn btn-outline-light btn-sm"><i class="fas fa-sign-in-alt me-1"></i> Đăng Nhập</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 2. MAIN CONTAINER: Chia 2 cột (Cột trái: Carousel lợi ích, Cột phải: Form đăng ký) -->
+    <main class="container my-auto py-5">
+        <div class="row align-items-center justify-content-center g-4">
+            
+            <!-- Cột trái: Bootstrap Carousel hiển thị lợi ích dịch vụ -->
+            <div class="col-lg-6">
+                <div id="benefitCarousel" class="carousel slide shadow rounded-4 overflow-hidden" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <!-- Slide 1 -->
+                        <div class="carousel-item active bg-success text-white p-5 text-center" style="min-height: 400px;">
+                            <div class="d-flex flex-column justify-content-center align-items-center h-100 py-5">
+                                <div class="display-3 mb-3">🥑</div>
+                                <h3 class="fw-bold">Tích Điểm Đổi Quà</h3>
+                                <p class="lead px-md-4">Mỗi ly sinh tố bơ hay trà đặc sản đều giúp bạn tích lũy điểm thưởng để đổi lấy những phần quà hấp dẫn.</p>
+                            </div>
+                        </div>
+                        <!-- Slide 2 -->
+                        <div class="carousel-item bg-dark text-white p-5 text-center" style="min-height: 400px;">
+                            <div class="d-flex flex-column justify-content-center align-items-center h-100 py-5">
+                                <div class="display-3 mb-3">⚡</div>
+                                <h3 class="fw-bold">Ưu Đãi Độc Quyền Sinh Viên</h3>
+                                <p class="lead px-md-4">Giảm ngay 20% tổng hóa đơn cho thành viên mới là sinh viên các trường đại học tại khu vực.</p>
+                            </div>
+                        </div>
+                        <!-- Slide 3 -->
+                        <div class="carousel-item bg-success bg-opacity-75 text-white p-5 text-center" style="min-height: 400px;">
+                            <div class="d-flex flex-column justify-content-center align-items-center h-100 py-5">
+                                <div class="display-3 mb-3">🚀</div>
+                                <h3 class="fw-bold">Góc Deadline Lý Tưởng</h3>
+                                <p class="lead px-md-4">Hệ thống Wi-Fi tốc độ cao cùng không gian mở giúp bạn học tập và chạy dự án hiệu quả nhất.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Nút điều hướng Carousel -->
+                    <button class="carousel-control-prev" type="button" data-bs-target="#benefitCarousel" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon"></span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#benefitCarousel" data-bs-slide="next">
+                        <span class="carousel-control-next-icon"></span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Cột phải: Form đăng ký người dùng -->
+            <div class="col-lg-6">
+                <div class="card shadow-sm border-0 p-4 p-md-5 rounded-4 bg-white">
+                    
+                    <div class="text-center mb-4">
+                        <h2 class="text-success fw-bold">Đăng Ký Thành Viên</h2>
+                        <p class="text-muted small">Điền thông tin bên dưới để bắt đầu trải nghiệm dịch vụ</p>
+                    </div>
+
+                    <form>
+                        <!-- Họ và tên -->
+                        <div class="mb-3">
+                            <label for="fullname" class="form-label fw-semibold">Họ và tên</label>
+                            <div class="input-group">
+                                <span class="input-group-text bg-light"><i class="fas fa-user text-muted"></i></span>
+                                <input type="text" class="form-control" id="fullname" placeholder="Nhập họ và tên" required>
+                            </div>
+                        </div>
+
+                        <!-- Email -->
+                        <div class="mb-3">
+                            <label for="email" class="form-label fw-semibold">Địa chỉ Email</label>
+                            <div class="input-group">
+                                <span class="input-group-text bg-light"><i class="fas fa-envelope text-muted"></i></span>
+                                <input type="email" class="form-control" id="email" placeholder="name@example.com" required>
+                            </div>
+                        </div>
+
+                        <!-- Mật khẩu -->
+                        <div class="mb-3">
+                            <label for="password" class="form-label fw-semibold">Mật khẩu</label>
+                            <div class="input-group">
+                                <span class="input-group-text bg-light"><i class="fas fa-lock text-muted"></i></span>
+                                <input type="password" class="form-control" id="password" placeholder="Nhập mật khẩu" required>
+                            </div>
+                        </div>
+
+                        <!-- Xác nhận mật khẩu -->
+                        <div class="mb-4">
+                            <label for="confirmPassword" class="form-label fw-semibold">Xác nhận mật khẩu</label>
+                            <div class="input-group">
+                                <span class="input-group-text bg-light"><i class="fas fa-lock text-muted"></i></span>
+                                <input type="password" class="form-control" id="confirmPassword" placeholder="Nhập lại mật khẩu" required>
+                            </div>
+                        </div>
+
+                        <!-- Nút Submit (Sử dụng btn-success để đồng bộ nhận diện thương hiệu quán) -->
+                        <div class="d-grid gap-2">
+                            <button type="submit" class="btn btn-success btn-lg fw-bold shadow-sm">Đăng Ký Ngay</button>
+                        </div>
+
+                        <!-- Chú thích chuyển trang -->
+                        <div class="text-center mt-3">
+                            <p class="text-muted small mb-0">Đã có tài khoản? <a href="#" class="text-success text-decoration-none fw-semibold">Đăng nhập</a></p>
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- 3. FOOTER -->
+    <footer class="bg-dark text-white text-center py-3 mt-auto">
+        <div class="container">
+            <p class="mb-0 small">&copy; 2026 Khánh Bán Bơ Chill. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Nhúng JavaScript của Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
