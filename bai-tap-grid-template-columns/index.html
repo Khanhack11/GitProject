@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid Columns - Khánh Bán Bơ Chill</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h2>Thực hành: CSS grid-template-columns</h2>
+    
+    <h3>Ví dụ 1: Sử dụng chiều dài (px) và auto</h3>
+    <p>Lưới này có 3 cột: Cột 1 và 3 cố định 150px, cột 2 tự động co giãn chiếm phần trống còn lại.</p>
+    <div class="grid-container-1">
+        <div class="grid-item">Ảnh Sinh Tố Bơ<br>(150px)</div>
+        <div class="grid-item">Mô tả: Bơ sáp Tây Nguyên xay nhuyễn mịn, vị ngọt thanh béo ngậy.<br>(auto)</div>
+        <div class="grid-item">Giá: 35.000đ<br>(150px)</div>
+    </div>
+
+    <h3>Ví dụ 2: Sử dụng max-content, min-content và auto</h3>
+    <p>Lưới này có 3 cột: Cột 1 tự động, cột 2 rộng đúng bằng nội dung lớn nhất, cột 3 ép nhỏ nhất có thể.</p>
+    <div class="grid-container-2">
+        <div class="grid-item">Cột 1: auto<br>Co giãn linh hoạt</div>
+        <div class="grid-item">Cột 2: max-content<br>Nội_dung_dài_đến_đâu_cột_rộng_đến_đó</div>
+        <div class="grid-item">Cột 3: min-content<br>Ép chữ xuống dòng</div>
+    </div>
+
+</body>
+</html>
