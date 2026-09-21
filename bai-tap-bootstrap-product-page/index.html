@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iPhone Style Product Page - Khánh Bán Bơ Chill</title>
+    <!-- Nhúng CSS của Bootstrap 5.3 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <!-- Nhúng Font Awesome để lấy icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-black text-white">
+
+    <!-- 1. SUB-NAVBAR TỐI GIẢN (Phong cách Apple Product Menu) -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark py-3 border-bottom border-secondary sticky-top">
+        <div class="container d-flex justify-content-between align-items-center">
+            <a class="navbar-brand fw-bold fs-5 text-white" href="#">🥑 Avocado Pro Max</a>
+            <ul class="navbar-nav flex-row gap-4 fs-6">
+                <li class="nav-item"><a class="nav-link text-white-50 hover-text-white" href="#overview">Tổng quan</a></li>
+                <li class="nav-item"><a class="nav-link text-white-50 hover-text-white" href="#specs">Thông số</a></li>
+                <li class="nav-item"><a class="btn btn-primary btn-sm rounded-pill px-3" href="#order">Đặt mua</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- 2. HERO SECTION: Tiêu đề lớn & Hình ảnh sản phẩm trung tâm -->
+    <header id="overview" class="text-center py-5 overflow-hidden">
+        <div class="container py-4">
+            <span class="text-warning text-uppercase tracking-widest fw-semibold small">Phiên bản đặc biệt mùa hè</span>
+            <h1 class="display-3 fw-bold mt-2 mb-3">Sinh Tố Bơ Sáp Xay Lạnh.</h1>
+            <p class="lead text-white-50 mb-4 mx-auto" style="max-width: 600px;">Hương vị sánh mịn đỉnh cao từ những trái bơ sáp Tây Nguyên chọn lọc khắt khe nhất. Đậm đà, tươi mát và bùng nổ năng lượng.</p>
+            <div class="d-flex justify-content-center gap-3 mb-5">
+                <a href="#order" class="btn btn-primary rounded-pill px-4 py-2 fw-semibold">Trải nghiệm ngay</a>
+                <a href="#specs" class="btn btn-outline-light rounded-pill px-4 py-2 fw-semibold">Tìm hiểu thêm <i class="fas fa-chevron-right small ms-1"></i></a>
+            </div>
+            <!-- Hình ảnh sản phẩm lớn sử dụng img-fluid -->
+            <div class="container px-md-5">
+                <img src="https://images.unsplash.com/photo-1551024709-8f23befc6f87?w=1000" alt="Avocado Smoothies" class="img-fluid rounded-5 shadow-lg" style="max-height: 500px; object-fit: cover; width: 100%;">
+            </div>
+        </div>
+    </header>
+
+    <!-- 3. SECTION THÔNG SỐ / TÍNH NĂNG (Ứng dụng Grid System & Flexbox & Font Awesome) -->
+    <section id="specs" class="py-5 bg-zinc bg-opacity-10 my-5">
+        <div class="container py-4">
+            <div class="text-center mb-5">
+                <h2 class="display-5 fw-bold">Đỉnh cao của sự nguyên chất.</h2>
+                <p class="text-white-50">Mỗi thành phần đều được tối ưu hóa để mang lại trải nghiệm vị giác hoàn hảo.</p>
+            </div>
+
+            <!-- Grid 3 cột thông số -->
+            <div class="row g-4 text-center">
+                <div class="col-md-4">
+                    <div class="p-4 bg-dark rounded-4 h-100 border border-secondary border-opacity-25 d-flex flex-column align-items-center">
+                        <div class="text-success fs-1 mb-3"><i class="fas fa-seedling"></i></div>
+                        <h3 class="h4 fw-bold mb-2">100% Sạch & Tự Nhiên</h3>
+                        <p class="text-white-50 small mb-0">Thu hoạch trực tiếp từ các nông trại đạt chuẩn, không hóa chất bảo quản, an toàn tuyệt đối cho sức khỏe.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="p-4 bg-dark rounded-4 h-100 border border-secondary border-opacity-25 d-flex flex-column align-items-center">
+                        <div class="text-warning fs-1 mb-3"><i class="fas fa-bolt"></i></div>
+                        <h3 class="h4 fw-bold mb-2">Năng Lượng Tức Thì</h3>
+                        <p class="text-white-50 small mb-0">Cung cấp nguồn protein thực vật và dưỡng chất thiết yếu giúp bạn lấy lại sự tập trung cao độ khi làm việc.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="p-4 bg-dark rounded-4 h-100 border border-secondary border-opacity-25 d-flex flex-column align-items-center">
+                        <div class="text-info fs-1 mb-3"><i class="fas fa-snowflake"></i></div>
+                        <h3 class="h4 fw-bold mb-2">Công Nghệ Xay Lạnh</h3>
+                        <p class="text-white-50 small mb-0">Giữ nguyên trọn vẹn vitamin và độ tươi ngon trong từng giọt sinh tố nhờ công nghệ xử lý nhiệt độ thấp.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. SECTION ĐẶT MUA (CTA SECTION PHONG CÁCH APPLE) -->
+    <section id="order" class="container py-5 text-center">
+        <div class="p-5 bg-gradient bg-dark rounded-5 border border-secondary border-opacity-50 shadow-lg">
+            <h2 class="display-6 fw-bold mb-3">Sở hữu ngay siêu phẩm mùa hè.</h2>
+            <p class="text-white-50 lead mb-4">Ghé ngay quán hoặc đặt giao hàng nhanh chóng tận nơi cho dân văn phòng và sinh viên.</p>
+            <div class="d-flex justify-content-center gap-3">
+                <a href="#" class="btn btn-success btn-lg rounded-pill px-5 fw-bold">Đặt Món Ngay - 35.000đ</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. FOOTER -->
+    <footer class="bg-black text-white-50 text-center py-4 border-top border-secondary mt-5 small">
+        <div class="container">
+            <p class="mb-0">&copy; 2026 Khánh Bán Bơ Chill Inc. All rights reserved. Thiết kế theo tiêu chuẩn Apple Product Page.</p>
+        </div>
+    </footer>
+
+    <!-- Nhúng JavaScript của Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
