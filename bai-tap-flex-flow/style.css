@@ -1,0 +1,49 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f6f7;
+    padding: 20px;
+    line-height: 1.6;
+    color: #333;
+}
+
+h3 {
+    color: #27ae60;
+    margin-top: 30px;
+}
+
+/* Khung Flexbox bọc ngoài */
+.flex-container {
+    display: flex;
+    background-color: #fff;
+    border: 2px dashed #bdc3c7;
+    padding: 15px;
+    gap: 15px;
+}
+
+/* Định dạng cơ bản cho các ô đồ uống */
+.flex-item {
+    background-color: #d5f5e3;
+    border: 1px solid #27ae60;
+    padding: 15px 20px;
+    font-weight: bold;
+    color: #2c3e50;
+    text-align: center;
+    border-radius: 5px;
+    width: 150px; /* Cố định chiều rộng để dễ quan sát */
+}
+
+/* --- THỰC HÀNH FLEX-FLOW --- */
+
+/* Cú pháp: flex-flow: <flex-direction> <flex-wrap>; */
+
+.flow-1 {
+    flex-flow: row nowrap; 
+}
+
+.flow-2 {
+    flex-flow: row-reverse nowrap; 
+}
