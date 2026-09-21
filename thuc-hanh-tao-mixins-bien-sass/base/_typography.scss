@@ -1,0 +1,12 @@
+// base/_typography.scss
+// Áp dụng biến định cỡ chữ và màu sắc cho các tiêu đề
+
+h1 {
+  font-size: $font-large;
+  color: $text-color;
+}
+
+h2 {
+  font-size: $font-medium;
+  color: $text-color;
+}

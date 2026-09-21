@@ -1,0 +1,17 @@
+// components/_cards.scss
+// Áp dụng mixin box-style cho component card
+
+.card {
+  @include box-style;
+  margin-bottom: 20px;
+
+  // Hỗ trợ nesting tiêu đề và nội dung thẻ
+  h2, h3 {
+    margin-top: 0;
+  }
+
+  p {
+    line-height: 1.6;
+    color: $text-color;
+  }
+}

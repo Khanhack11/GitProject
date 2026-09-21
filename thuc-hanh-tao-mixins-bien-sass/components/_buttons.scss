@@ -1,0 +1,19 @@
+// components/_buttons.scss
+// Áp dụng mixin button-style với tham số $primary-color
+
+.button {
+  @include button-style($primary-color);
+  display: inline-block;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  transition: opacity 0.2s ease, transform 0.1s ease;
+
+  &:hover {
+    opacity: 0.9;
+  }
+
+  &:active {
+    transform: scale(0.98);
+  }
+}
