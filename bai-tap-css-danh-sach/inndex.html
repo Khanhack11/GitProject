@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Danh sách trong CSS</title>
+    <style>
+        /* 1. Thay đổi kiểu đánh dấu (list-style-type) */
+        ul.square-list { list-style-type: square; } /* Dấu vuông */
+        ol.roman-list { list-style-type: upper-roman; } /* Số La Mã */
+
+        /* 2. Đánh dấu bằng hình ảnh (list-style-image) */
+        ul.image-list {
+            /* Sử dụng một icon dấu tích nhỏ làm bullet */
+            list-style-image: url('https://cdn-icons-png.flaticon.com/16/271/271228.png');
+        }
+
+        /* 3. Vị trí đánh dấu (list-style-position) */
+        /* Border giúp bạn nhìn rõ khối nội dung để phân biệt inside và outside */
+        ul.inside-list { list-style-position: inside; border: 1px solid #333; }
+        ul.outside-list { list-style-position: outside; border: 1px solid #333; }
+
+        /* 4. Kiểu danh sách với màu sắc */
+        ol.colored-list {
+            background-color: #3399ff;
+            padding: 20px;
+            border-radius: 5px;
+        }
+        ol.colored-list li {
+            background-color: #cce5ff;
+            color: #004085;
+            margin: 5px 0;
+            padding: 5px 10px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>Thực hành: Danh sách trong CSS</h1>
+
+    <h2>1. Các kiểu đánh dấu khác nhau</h2>
+    <ul class="square-list">
+        <li>Sinh tố bơ</li>
+        <li>Nước dừa</li>
+    </ul>
+    <ol class="roman-list">
+        <li>Học cơ sở dữ liệu</li>
+        <li>Học ASP.NET Core MVC</li>
+    </ol>
+
+    <h2>2. Đánh dấu bằng hình ảnh</h2>
+    <ul class="image-list">
+        <li>Hoàn thiện menu đồ uống</li>
+        <li>Khai trương quán</li>
+    </ul>
+
+    <h2>3. Vị trí đánh dấu (Inside vs Outside)</h2>
+    <ul class="inside-list">
+        <li>Vị trí INSIDE: Dấu chấm nằm bên trong khối nội dung. Nếu văn bản quá dài xuống dòng, nó sẽ thụt lề bọc lấy cả dấu chấm.</li>
+    </ul>
+    <ul class="outside-list">
+        <li>Vị trí OUTSIDE (Mặc định): Dấu chấm nằm bên ngoài khối nội dung. Văn bản xuống dòng sẽ thụt lề bằng hàng với chữ ở dòng trên.</li>
+    </ul>
+
+    <h2>4. Định dạng danh sách với màu sắc</h2>
+    <ol class="colored-list">
+        <li>Kiểm tra email</li>
+        <li>Đóng gói hàng hóa</li>
+        <li>Giao cho đơn vị vận chuyển</li>
+    </ol>
+</body>
+</html>
