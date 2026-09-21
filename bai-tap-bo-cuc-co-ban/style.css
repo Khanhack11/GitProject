@@ -1,0 +1,83 @@
+/* Áp dụng Box Model chuẩn cho toàn bộ trang */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f6f7;
+    margin: 0;
+    padding: 20px 0;
+}
+
+/* Cố định độ rộng 1000px và căn giữa trang web */
+#main {
+    width: 1000px;
+    margin: 0 auto;
+}
+
+/* Phần logo & banner */
+#head {
+    height: 120px;
+    background-color: #27ae60;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    border-radius: 5px 5px 0 0;
+    margin-bottom: 10px;
+}
+
+#head h1, #head p {
+    margin: 5px 0;
+}
+
+/* Phần thanh menu */
+#head-link {
+    background-color: #34495e;
+    color: white;
+    padding: 15px 20px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+/* Cột trái: Đẩy sang trái (float: left) */
+#left {
+    width: 220px;
+    min-height: 400px;
+    float: left;
+    background-color: #ecf0f1;
+    padding: 20px;
+    border: 1px solid #bdc3c7;
+}
+
+/* Cột giữa: Đẩy sang trái, nằm cạnh cột trái */
+#content {
+    width: 540px;
+    min-height: 400px;
+    float: left;
+    background-color: white;
+    padding: 20px;
+    margin: 0 10px; /* Tạo khoảng cách với cột trái và phải */
+    border: 1px solid #bdc3c7;
+}
+
+/* Cột phải: Đẩy sang phải (float: right) */
+#right {
+    width: 220px;
+    min-height: 400px;
+    float: right;
+    background-color: #ecf0f1;
+    padding: 20px;
+    border: 1px solid #bdc3c7;
+}
+
+/* Chân trang: Dùng clear: both để thoát khỏi ảnh hưởng của float */
+#footer {
+    clear: both;
+    background-color: #2c3e50;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 10px;
+    border-radius: 0 0 5px 5px;
+}
