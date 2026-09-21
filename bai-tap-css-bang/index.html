@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Bảng trong CSS</title>
+    <style>
+        /* border-collapse giúp gộp viền đôi thành viền đơn, width 100% giúp bảng trải dài hết trang */
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        /* Định dạng chung cho đường viền và khoảng cách bên trong ô (padding) */
+        th, td {
+            border: 1px solid black;
+            padding: 15px; 
+            text-align: left; /* Căn trái nội dung */
+            vertical-align: bottom; /* Căn dưới theo chiều dọc */
+        }
+
+        /* Định dạng riêng cho Tiêu đề (th) với màu nền xanh, chữ trắng, chiều cao 50px */
+        th {
+            height: 50px;
+            background-color: #4CAF50;
+            color: white;
+            text-align: center; /* Ghi đè căn trái, cho tiêu đề nằm giữa */
+        }
+
+        /* Thêm hiệu ứng màu nền xen kẽ cho các hàng (chẵn) để dễ nhìn hơn */
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <h2>Bảng Menu: Khánh Bán Bơ Chill (Đã thêm CSS)</h2>
+    
+    <table>
+        <tr>
+            <th>Tên đồ uống</th>
+            <th>Giá tiền</th>
+            <th>Ghi chú</th>
+        </tr>
+        <tr>
+            <td>Sinh tố bơ</td>
+            <td>25.000 VNĐ</td>
+            <td>Bestseller - Ngon đỉnh cao</td>
+        </tr>
+        <tr>
+            <td>Nước dừa tươi</td>
+            <td>20.000 VNĐ</td>
+            <td>Thanh mát, giải nhiệt</td>
+        </tr>
+        <tr>
+            <td>Trà Shan Tuyết Hà Giang</td>
+            <td>35.000 VNĐ</td>
+            <td>Trà đặc sản cao cấp</td>
+        </tr>
+    </table>
+</body>
+</html>
