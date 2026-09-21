@@ -1,0 +1,79 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f6f7;
+}
+
+/* Định dạng thanh menu chính */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #27ae60;
+    padding: 15px 20px;
+    color: white;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin: 0 15px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.nav-links a:hover {
+    color: #f1c40f;
+}
+
+.menu-icon {
+    display: none; /* Mặc định ẩn nút ☰ trên màn hình máy tính */
+    font-size: 28px;
+    cursor: pointer;
+}
+
+/* 📱 RESPONSIVE CHO MOBILE (Áp dụng khi màn hình nhỏ hơn 768px) */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none; /* Ẩn menu ngang */
+        flex-direction: column; /* Chuyển thành hiển thị dọc */
+        position: absolute; /* Thả trôi menu xổ xuống */
+        top: 60px;
+        left: 0;
+        background-color: #2ecc71;
+        width: 100%;
+        text-align: center;
+    }
+
+    .nav-links li {
+        padding: 15px 0;
+        border-bottom: 1px solid #27ae60;
+    }
+
+    .menu-icon {
+        display: block; /* Hiện nút ☰ */
+    }
+}
+
+/* Class được kích hoạt bằng JavaScript để mở menu trên mobile */
+.nav-links.active {
+    display: flex;
+}
