@@ -1,0 +1,98 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f6f7;
+}
+
+/* --- THIẾT LẬP BỐ CỤC CSS GRID CHÍNH --- */
+.container {
+    display: grid;
+    grid-template-columns: 1fr 3fr; /* Cột trái 1 phần, cột phải 3 phần */
+    grid-template-rows: auto 1fr auto; /* Header tự động, Content chiếm phần giữa, Footer tự động */
+    grid-template-areas: 
+        "header header"
+        "sidebar content"
+        "footer footer";
+    min-height: 100vh; /* Đảm bảo bố cục luôn dài ít nhất bằng chiều cao màn hình */
+}
+
+/* Gắn tên khu vực và định dạng cho Header */
+.header {
+    grid-area: header;
+    background-color: #27ae60;
+    color: white;
+    text-align: center;
+    padding: 30px 20px;
+}
+
+/* Gắn tên khu vực và định dạng cho Sidebar */
+.sidebar {
+    grid-area: sidebar;
+    background-color: #ecf0f1;
+    padding: 20px;
+    border-right: 1px solid #bdc3c7;
+}
+
+.sidebar h3 {
+    margin-bottom: 15px;
+    color: #2c3e50;
+}
+
+.sidebar ul {
+    list-style: none;
+    line-height: 2;
+}
+
+.sidebar ul a {
+    text-decoration: none;
+    color: #27ae60;
+    font-weight: bold;
+}
+
+/* Gắn tên khu vực và định dạng cho Nội dung chính */
+.content {
+    grid-area: content;
+    padding: 30px;
+    background-color: #ffffff;
+    color: #333;
+    line-height: 1.6;
+}
+
+.content h2 {
+    color: #27ae60;
+    margin-bottom: 15px;
+}
+
+/* Gắn tên khu vực và định dạng cho Footer */
+.footer {
+    grid-area: footer;
+    background-color: #2c3e50;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+/* --- RESPONSIVE CHO ĐIỆN THOẠI (< 768px) --- */
+@media (max-width: 768px) {
+    .container {
+        /* Đổi thành lưới 1 cột duy nhất */
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto 1fr auto;
+        /* Vẽ lại sơ đồ: các khối xếp chồng lên nhau từ trên xuống dưới */
+        grid-template-areas: 
+            "header"
+            "sidebar"
+            "content"
+            "footer";
+    }
+    
+    .sidebar {
+        border-right: none;
+        border-bottom: 1px solid #bdc3c7;
+    }
+}
