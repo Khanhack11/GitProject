@@ -1,0 +1,45 @@
+/* Áp dụng Box Model để padding không làm vỡ kích thước 100% */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+}
+
+/* Container dùng overflow: hidden để bao bọc các phần tử float bên trong (Clearfix trick) */
+.container {
+    width: 100%;
+    overflow: hidden;
+    border: 2px dashed #333;
+    padding: 10px;
+}
+
+.left-column {
+    width: 50%;
+    float: left;
+    background-color: lightgray;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.right-column {
+    width: 48%;
+    float: right;
+    background-color: lightgreen;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+/* Định dạng khối cuộn nội dung */
+.overflow-box {
+    width: 300px;
+    height: 100px; /* Cố định chiều cao, nếu nội dung dài hơn sẽ xuất hiện thanh cuộn */
+    background-color: lightcoral;
+    color: white;
+    padding: 15px;
+    overflow: auto; /* Tự động hiện thanh cuộn khi cần */
+    border-radius: 5px;
+    line-height: 1.5;
+}
