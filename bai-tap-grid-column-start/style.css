@@ -1,0 +1,53 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f6f7;
+    padding: 20px;
+    line-height: 1.6;
+}
+
+h3 {
+    margin-top: 30px;
+    color: #2c3e50;
+}
+
+/* Lưới chính chứa 4 cột bằng nhau (1fr = 1 phần không gian) */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); 
+    gap: 15px;
+    background-color: #fff;
+    padding: 15px;
+    border: 2px dashed #bdc3c7;
+}
+
+/* Định dạng cơ bản cho các ô trong lưới */
+.grid-item {
+    background-color: #d5f5e3;
+    border: 1px solid #27ae60;
+    padding: 20px;
+    text-align: center;
+    font-weight: bold;
+    border-radius: 5px;
+    color: #2c3e50;
+}
+
+/* --- TRƯỜNG HỢP 1: Tự động --- */
+.item-auto {
+    grid-column-start: auto;
+    background-color: #f1c40f; /* Màu vàng */
+}
+
+/* --- TRƯỜNG HỢP 2: Chiếm 3 cột --- */
+.item-span {
+    grid-column-start: span 3;
+    background-color: #e74c3c; /* Màu đỏ */
+    color: white;
+}
+
+/* --- TRƯỜNG HỢP 3: Bắt đầu từ vạch lưới số 3 --- */
+/* Lưu ý: Trong CSS Grid, vạch (line) số 1 nằm ở mép ngoài cùng bên trái. Vạch số 3 chính là bắt đầu của cột thứ 3 */
+.item-line {
+    grid-column-start: 3;
+    background-color: #3498db; /* Màu xanh dương */
+    color: white;
+}

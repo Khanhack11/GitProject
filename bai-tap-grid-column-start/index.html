@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS grid-column-start - Khánh Bán Bơ Chill</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h2>Thực hành: Định vị phần tử với grid-column-start</h2>
+    <p>Lưới (Grid) dưới đây được chia sẵn thành 4 cột bằng nhau. Hãy quan sát vị trí của phần tử đầu tiên (có màu sắc khác biệt) trong 3 trường hợp.</p>
+
+    <h3>1. Giá trị: auto (Mặc định)</h3>
+    <p>Phần tử tự động xếp vào cột đầu tiên còn trống.</p>
+    <div class="grid-container">
+        <div class="grid-item item-auto">Sinh tố bơ (auto)</div>
+        <div class="grid-item">Nước dừa</div>
+        <div class="grid-item">Trà Shan Tuyết</div>
+        <div class="grid-item">Trà Nhài</div>
+    </div>
+
+    <h3>2. Giá trị: span 3 (Kéo dài chiếm 3 cột)</h3>
+    <p>Phần tử kéo dài ra, chiếm trọn không gian của 3 cột liên tiếp.</p>
+    <div class="grid-container">
+        <div class="grid-item item-span">Combo Best Seller (span 3)</div>
+        <div class="grid-item">Nước dừa</div>
+        <div class="grid-item">Trà Shan Tuyết</div>
+        <div class="grid-item">Trà Nhài</div>
+    </div>
+
+    <h3>3. Giá trị: 3 (column-line)</h3>
+    <p>Phần tử bỏ qua các cột đầu, nhảy thẳng đến bắt đầu từ vạch lưới dọc số 3 (tức là cột thứ 3).</p>
+    <div class="grid-container">
+        <div class="grid-item item-line">Món mới (Bắt đầu từ vạch 3)</div>
+        <div class="grid-item">Nước dừa</div>
+        <div class="grid-item">Trà Shan Tuyết</div>
+        <div class="grid-item">Trà Nhài</div>
+    </div>
+</body>
+</html>
