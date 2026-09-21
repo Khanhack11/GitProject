@@ -1,0 +1,11 @@
+// components/_cards.scss
+.card {
+  border: 1px solid $border-color;
+  padding: 20px;
+  @include box-shadow;
+
+  // Nesting selector con theo chuẩn SASS
+  .card-title {
+    margin-top: 0;
+  }
+}

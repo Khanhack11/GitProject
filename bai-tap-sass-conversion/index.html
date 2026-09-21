@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>[Thực hành] Chuyển đổi CSS có sẵn sang SASS theo chuẩn</title>
+  <!-- Liên kết đến file CSS được biên dịch từ SASS (main.scss) -->
+  <link rel="stylesheet" href="css/main.css">
+  <style>
+    /* Bổ sung một số style hỗ trợ hiển thị trang demo trực quan */
+    header {
+      text-align: center;
+      padding: 30px 0 10px;
+    }
+    .badge {
+      display: inline-block;
+      background: #28a745;
+      color: white;
+      padding: 4px 12px;
+      border-radius: 20px;
+      font-size: 0.85rem;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+      margin: 25px 0;
+    }
+    .code-box {
+      background: #1e1e1e;
+      color: #d4d4d4;
+      padding: 15px;
+      border-radius: 6px;
+      font-family: Consolas, monospace;
+      font-size: 0.9rem;
+      overflow-x: auto;
+      line-height: 1.4;
+      margin-top: 10px;
+    }
+    .footer {
+      text-align: center;
+      margin-top: 40px;
+      padding: 20px 0;
+      color: #777;
+      font-size: 0.9rem;
+      border-top: 1px solid #ddd;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <span class="badge">SASS / SCSS 7-1 Architecture</span>
+    <h1>Thực hành: Chuyển đổi CSS sang SASS theo chuẩn</h1>
+    <p>Dự án minh họa áp dụng biến, mixins, nesting và partials chuẩn hóa cấu trúc thư mục SASS</p>
+  </header>
+
+  <!-- Sử dụng class .container từ layout/_container.scss -->
+  <div class="container">
+    
+    <!-- Hiển thị các Component áp dụng từ SCSS -->
+    <div class="grid">
+      <!-- Card 1: Giới thiệu -->
+      <div class="card">
+        <h3 class="card-title">📦 Cấu trúc Thư mục SASS</h3>
+        <p>Mã nguồn được phân tách khoa học thành các modules nhỏ (partials) để dễ quản lý:</p>
+        <ul>
+          <li><code>abstracts/_variables.scss</code>: Biến màu sắc, shadow</li>
+          <li><code>abstracts/_mixins.scss</code>: Mixin tái sử dụng button, shadow</li>
+          <li><code>base/_global.scss</code>: Định kiểu toàn trang</li>
+          <li><code>layout/_container.scss</code>: Khung chứa layout</li>
+          <li><code>components/_buttons.scss</code>: Nút bấm</li>
+          <li><code>components/_cards.scss</code>: Thẻ thông tin</li>
+        </ul>
+        <!-- Sử dụng class .button từ components/_buttons.scss -->
+        <button class="button" type="button" onclick="alert('Thành công! SCSS button mixin đang hoạt động tốt!')">Kiểm tra Button</button>
+      </div>
+
+      <!-- Card 2: Lợi ích của SASS -->
+      <div class="card">
+        <h3 class="card-title">🚀 Kết quả Đạt được</h3>
+        <p>So sánh trước và sau khi chuẩn hóa SASS:</p>
+        <ul>
+          <li><strong>Variables:</strong> Tập trung màu sắc (<code>$primary-color</code>, <code>$border-color</code>) tại một nơi.</li>
+          <li><strong>Mixins:</strong> Tái sử dụng khối thuộc tính nút và đổ bóng hộp linh hoạt.</li>
+          <li><strong>Nesting:</strong> Cú pháp lồng gọn gàng với <code>&:hover</code> và selector con.</li>
+          <li><strong>Partials:</strong> Import có tổ chức vào <code>main.scss</code>.</li>
+        </ul>
+        <a href="#code-comparison" class="button" style="text-decoration: none; display: inline-block;">Xem Chi Tiết Mã</a>
+      </div>
+    </div>
+
+    <!-- Khối so sánh CSS và SCSS -->
+    <div class="card" id="code-comparison" style="margin-top: 20px;">
+      <h3 class="card-title">📝 So sánh CSS Ban đầu & Cấu trúc SCSS Đã Chuyển Đổi</h3>
+      
+      <p><strong>1. File main.scss (Tổng hợp các Partials):</strong></p>
+      <div class="code-box">@import "abstracts/variables";
+@import "abstracts/mixins";
+@import "base/global";
+@import "layout/container";
+@import "components/buttons";
+@import "components/cards";</div>
+
+      <p style="margin-top: 15px;"><strong>2. Lệnh biên dịch bằng SASS CLI:</strong></p>
+      <div class="code-box">sass main.scss css/main.css
+sass --watch main.scss:css/main.css</div>
+    </div>
+
+    <div class="footer">
+      <p>&copy; 2026 - Dự án Thực hành Chuyển đổi CSS sang SASS theo chuẩn</p>
+    </div>
+
+  </div>
+
+</body>
+</html>

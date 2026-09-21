@@ -1,0 +1,10 @@
+// components/_buttons.scss
+.button {
+  @include button-style($primary-color);
+
+  // Nesting pseudo-class :hover theo chuẩn SASS
+  &:hover {
+    opacity: 0.9;
+    cursor: pointer;
+  }
+}

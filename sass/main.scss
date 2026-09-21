@@ -1,0 +1,7 @@
+// main.scss - Import tất cả partials theo chuẩn cấu trúc SASS 7-1
+@import "abstracts/variables";
+@import "abstracts/mixins";
+@import "base/global";
+@import "layout/container";
+@import "components/buttons";
+@import "components/cards";

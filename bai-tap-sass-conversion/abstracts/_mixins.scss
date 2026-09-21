@@ -1,0 +1,13 @@
+// abstracts/_mixins.scss
+// Định nghĩa mixins để tái sử dụng mã CSS
+
+@mixin button-style($bg-color) {
+  background: $bg-color;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+
+@mixin box-shadow {
+  box-shadow: $box-shadow;
+}

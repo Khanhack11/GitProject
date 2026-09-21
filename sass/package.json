@@ -1,0 +1,17 @@
+{
+  "name": "bai-tap-sass-conversion",
+  "version": "1.0.0",
+  "description": "Thuc hanh chuyen doi CSS co san sang SASS theo chuan",
+  "scripts": {
+    "build": "sass main.scss css/main.css",
+    "watch": "sass --watch main.scss:css/main.css"
+  },
+  "keywords": [
+    "sass",
+    "scss",
+    "css",
+    "practice"
+  ],
+  "author": "",
+  "license": "ISC"
+}
