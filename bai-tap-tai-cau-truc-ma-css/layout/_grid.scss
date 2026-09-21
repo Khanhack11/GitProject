@@ -1,0 +1,110 @@
+// layout/_grid.scss
+// Tái cấu trúc hệ thống 12 cột Responsive Grid sang SASS chuẩn
+
+.gridcontainer {
+  width: 100%;
+  position: relative;
+  @include clearfix;
+}
+
+// Khung chứa hàng (Wrapper tương đương Row)
+.gridwrapper {
+  overflow: auto;
+  position: relative;
+  height: $default-wrapper-height;
+  width: 100%;
+  @include clearfix;
+
+  // Modifier classes thay thế các inline style height
+  &--header {
+    height: $header-height;
+  }
+
+  &--body {
+    height: $body-content-height;
+  }
+
+  &--footer {
+    height: $footer-height;
+  }
+
+  &--guide {
+    height: $guide-grid-height;
+  }
+
+  // Tự co giãn chiều cao trên màn hình điện thoại
+  @include respond-to(mobile) {
+    height: auto !important;
+    overflow: visible;
+  }
+}
+
+// Cột cơ bản trong hệ thống Grid
+.gridcontent {
+  width: $grid-base-col-width; // Mặc định 8.33% = 1 cột trên 12
+  margin: 0;
+  border-right: 1px solid $border-color-grid;
+  height: 100%;
+  float: left;
+  background-color: $color-grid-default;
+  transition: width 0.3s ease;
+
+  // Modifier không viền
+  &--no-border {
+    border: none !important;
+    border-right-color: transparent !important;
+  }
+
+  // Khối cột nền trắng
+  &--white-bg {
+    background-color: $color-bg-light;
+    border: none;
+  }
+
+  // Padding cho khối nội dung
+  &--padded {
+    padding-top: 15px;
+  }
+}
+
+// Vòng lặp tự động sinh các class 12 cột: .col-1 -> .col-12
+@for $i from 1 through $grid-columns {
+  .col-#{$i} {
+    width: col-width($i);
+  }
+}
+
+// Cấu trúc lớp phủ Layout chính (Overlay)
+.grid-overlay {
+  position: absolute;
+  opacity: $overlay-opacity;
+  width: auto;
+  left: 8px;
+  right: 10px;
+  z-index: 10;
+
+  @include respond-to(mobile) {
+    position: relative;
+    left: 0;
+    right: 0;
+    opacity: 1;
+  }
+}
+
+// Lưới 12 cột làm mốc hiển thị phía sau (Guide Grid)
+.grid-guide {
+  opacity: $guide-opacity;
+
+  .gridcontent {
+    background-color: $color-bg-light;
+    border-right: 1px solid $border-color-guide;
+
+    &:first-child {
+      border-left: 1px solid $border-color-guide;
+    }
+  }
+
+  @include respond-to(mobile) {
+    display: none; // Ẩn lưới mốc trên thiết bị di động
+  }
+}

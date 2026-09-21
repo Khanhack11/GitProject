@@ -1,0 +1,47 @@
+// components/_menu.scss
+// Module định kiểu cho thanh menu bên trái và khối nội dung bên phải
+
+// Các thanh menu điều hướng
+.menu-item-bar {
+  background-color: $color-accent;
+  border: none;
+  width: 100%;
+  height: 15%;
+  margin-bottom: 10px;
+  border-radius: 3px;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+
+  &:hover {
+    opacity: 0.85;
+    transform: translateX(2px);
+    cursor: pointer;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  @include respond-to(mobile) {
+    height: 35px;
+    margin-bottom: 8px;
+  }
+}
+
+// Khối hiển thị nội dung bên phải
+.main-content-block {
+  background-color: $color-accent;
+  border: none;
+  width: 100%;
+  height: 92%;
+  border-radius: 3px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  font-size: 0.95rem;
+
+  @include respond-to(mobile) {
+    min-height: 120px;
+    margin-top: 10px;
+  }
+}

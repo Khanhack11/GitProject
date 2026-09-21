@@ -1,0 +1,18 @@
+{
+  "name": "bai-tap-tai-cau-truc-css-responsive-grid",
+  "version": "1.0.0",
+  "description": "Tai cau truc ma CSS responsive-grid sang SASS",
+  "scripts": {
+    "build": "sass main.scss css/main.css",
+    "watch": "sass --watch main.scss:css/main.css"
+  },
+  "keywords": [
+    "sass",
+    "scss",
+    "responsive-grid",
+    "refactor",
+    "codegym"
+  ],
+  "author": "",
+  "license": "ISC"
+}

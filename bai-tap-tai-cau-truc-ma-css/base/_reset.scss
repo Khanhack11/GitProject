@@ -1,0 +1,21 @@
+// base/_reset.scss
+// Reset CSS cơ bản và thiết lập toàn cục
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 15px;
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  color: $color-text;
+  background-color: #fafafa;
+}
+
+p.info-text {
+  margin-top: 25px;
+  font-size: 0.95rem;
+  color: #555;
+  line-height: 1.5;
+}

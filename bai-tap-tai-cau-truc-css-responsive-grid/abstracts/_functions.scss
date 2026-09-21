@@ -1,0 +1,8 @@
+// abstracts/_functions.scss
+// Các hàm tiện ích tính toán trong SASS
+@use "sass:math";
+
+// Hàm tính toán phần trăm độ rộng của cột dựa trên tổng số cột chuẩn Sass hiện đại
+@function col-width($columns, $total-columns: 12) {
+  @return math.percentage(math.div($columns, $total-columns));
+}

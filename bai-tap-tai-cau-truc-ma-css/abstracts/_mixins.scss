@@ -1,0 +1,34 @@
+// abstracts/_mixins.scss
+// Các mixin tái sử dụng mã CSS và xử lý Responsive
+
+// Mixin xử lý float và clearfix
+@mixin clearfix {
+  &::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+// Mixin hỗ trợ media query responsive
+@mixin respond-to($device) {
+  @if $device == mobile {
+    @media (max-width: $breakpoint-mobile) {
+      @content;
+    }
+  } @else if $device == tablet {
+    @media (max-width: $breakpoint-tablet) {
+      @content;
+    }
+  } @else if $device == desktop {
+    @media (min-width: #{$breakpoint-tablet + 1px}) {
+      @content;
+    }
+  }
+}
+
+// Mixin định dạng khung khối bo góc và đổ bóng nhẹ
+@mixin card-box {
+  background-color: $color-bg-light;
+  border-radius: 4px;
+}

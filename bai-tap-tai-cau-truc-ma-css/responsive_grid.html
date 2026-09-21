@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>[Bài tập] Tái cấu trúc mã CSS cho sẵn (Responsive Grid) - SASS</title>
+  <!-- Liên kết đến CSS đã được tái cấu trúc và biên dịch từ SASS -->
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+
+  <!-- Khối Layout chính (Lớp phủ Overlay hiển thị phía trước) -->
+  <div class="grid-overlay">
+    <div class="gridcontainer">
+      
+      <!-- Hàng Header: Chiếm toàn bộ 12 cột (width: 100%) -->
+      <div class="gridwrapper gridwrapper--header">
+        <div class="gridcontent col-12 gridcontent--no-border">
+          <div class="header-block">HEADER (12 CỘT / 100%)</div>
+        </div>
+      </div>
+
+      <!-- Hàng Thân: Left Menu (3 cột = 25%), 6 cột khoảng trống (50%), Right Content (3 cột = 25%) -->
+      <div class="gridwrapper gridwrapper--body">
+        
+        <!-- Cột menu bên trái: 3 cột trên 12 = 25% -->
+        <div class="gridcontent col-3 gridcontent--white-bg gridcontent--padded">
+          <div class="menu-item-bar" title="Menu Item 1"></div>
+          <div class="menu-item-bar" title="Menu Item 2"></div>
+          <div class="menu-item-bar" title="Menu Item 3"></div>
+          <div class="menu-item-bar" title="Menu Item 4"></div>
+        </div>
+
+        <!-- 6 cột ở giữa (6 x 8.33% = 50%) -->
+        <div class="gridcontent col-1 gridcontent--white-bg"></div>
+        <div class="gridcontent col-1 gridcontent--white-bg"></div>
+        <div class="gridcontent col-1 gridcontent--white-bg"></div>
+        <div class="gridcontent col-1 gridcontent--white-bg"></div>
+        <div class="gridcontent col-1 gridcontent--white-bg"></div>
+        <div class="gridcontent col-1 gridcontent--white-bg"></div>
+
+        <!-- Cột nội dung bên phải: 3 cột trên 12 = 25% -->
+        <div class="gridcontent col-3 gridcontent--white-bg gridcontent--padded">
+          <div class="main-content-block">CONTENT (3 CỘT / 25%)</div>
+        </div>
+
+      </div>
+
+      <!-- Hàng Footer: Chiếm toàn bộ 12 cột (width: 100%) -->
+      <div class="gridwrapper gridwrapper--footer">
+        <div class="gridcontent col-12 gridcontent--no-border">
+          <div class="footer-block">FOOTER (12 CỘT / 100%)</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Lưới 12 cột làm mốc hiển thị phía sau (Guide Grid) -->
+  <div class="gridcontainer grid-guide">
+    <div class="gridwrapper gridwrapper--guide">
+      <div class="gridcontent col-1"></div>
+      <div class="gridcontent col-1"></div>
+      <div class="gridcontent col-1"></div>
+      <div class="gridcontent col-1"></div>
+      <div class="gridcontent col-1"></div>
+      <div class="gridcontent col-1"></div>
+      <div class="gridcontent col-1"></div>
+      <div class="gridcontent col-1"></div>
+      <div class="gridcontent col-1"></div>
+      <div class="gridcontent col-1"></div>
+      <div class="gridcontent col-1"></div>
+      <div class="gridcontent col-1"></div>
+    </div>
+  </div>
+
+  <p class="info-text">
+    <strong>Ghi chú:</strong> Thay đổi kích thước cửa sổ trình duyệt để thấy lưới co giãn tự động theo tỷ lệ phần trăm (100% không gian sẵn có).
+    Mã CSS gốc chứa nhiều inline style đã được tái cấu trúc hoàn toàn sang kiến trúc SASS 7-1 chuẩn mực với biến, vòng lặp sinh 12 cột tự động và mixin responsive.
+  </p>
+
+</body>
+</html>

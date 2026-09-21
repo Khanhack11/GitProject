@@ -1,0 +1,15 @@
+// components/_header.scss
+// Module định kiểu cho Header
+
+.header-block {
+  width: 100%;
+  height: 100%;
+  background-color: $color-header;
+  border-right-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  font-weight: bold;
+  letter-spacing: 1px;
+}

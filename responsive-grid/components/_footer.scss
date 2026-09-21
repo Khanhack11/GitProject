@@ -1,0 +1,14 @@
+// components/_footer.scss
+// Module định kiểu cho Footer
+
+.footer-block {
+  width: 100%;
+  height: 100%;
+  background-color: $color-footer;
+  border-right-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  font-size: 0.9rem;
+}
