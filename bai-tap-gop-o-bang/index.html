@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Gộp ô trong bảng</title>
+</head>
+<body>
+    <h2>Thời khóa biểu</h2>
+    <table border="1">
+        <tr>
+            <th>Thứ</th>
+            <th>Môn học</th>
+            <th>Giáo viên</th>
+        </tr>
+        <tr>
+            <!-- rowspan="2" gộp 2 hàng của cột "Thứ" lại làm 1 -->
+            <td rowspan="2">Thứ Hai</td>
+            <td>Toán</td>
+            <td>Thầy Nam</td>
+        </tr>
+        <tr>
+            <td>Văn</td>
+            <td>Cô Hạnh</td>
+        </tr>
+        <tr>
+            <td>Thứ Ba</td>
+            <!-- colspan="2" gộp 2 cột "Môn học" và "Giáo viên" lại làm 1 -->
+            <td colspan="2" style="text-align: center;">Nghỉ học</td>
+        </tr>
+    </table>
+</body>
+</html>
