@@ -1,0 +1,32 @@
+// abstracts/_variables.scss
+// Quản lý tập trung toàn bộ biến cấu hình màu sắc, kích thước, số cột grid
+
+// Hệ thống Grid
+$grid-columns: 12;
+$grid-base-col-width: 8.33%; // 100% / 12
+
+// Kích thước chiều cao các khối
+$header-height: 90px;
+$body-content-height: 230px;
+$footer-height: 50px;
+$guide-grid-height: 370px;
+$default-wrapper-height: 250px;
+
+// Bảng màu giao diện (Color Palette)
+$color-header: #9933cc;       // Tím tím nổi bật của phần Header
+$color-footer: #0099cc;       // Xanh dương đậm của phần Footer
+$color-accent: #33b5e5;       // Xanh ngọc của các item menu và content block
+$color-bg-light: #ffffff;     // Nền trắng của nội dung
+$color-grid-default: #f1f1f1; // Nền mặc định của grid
+$color-text: #333333;         // Màu chữ cơ bản
+
+// Đường viền & opacity
+$border-color-grid: grey;
+$border-color-guide: #000000;
+$overlay-opacity: 0.9;
+$guide-opacity: 0.1;
+
+// Điểm ngắt Responsive (Breakpoints)
+$breakpoint-mobile: 600px;
+$breakpoint-tablet: 768px;
+$breakpoint-desktop: 992px;

@@ -1,0 +1,9 @@
+// styles.scss - File SCSS chính tương đương
+@import "abstracts/variables";
+@import "abstracts/functions";
+@import "abstracts/mixins";
+@import "base/reset";
+@import "layout/grid";
+@import "components/header";
+@import "components/menu";
+@import "components/footer";

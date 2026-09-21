@@ -7,7 +7,7 @@
   @include clearfix;
 }
 
-// Khung chứa hàng (Wrapper tương đương Row)
+// Khung chứa hàng (Row wrapper)
 .gridwrapper {
   overflow: auto;
   position: relative;
@@ -15,7 +15,7 @@
   width: 100%;
   @include clearfix;
 
-  // Modifier classes thay thế các inline style height
+  // Modifier classes xác định chiều cao cho từng phần
   &--header {
     height: $header-height;
   }
@@ -32,7 +32,7 @@
     height: $guide-grid-height;
   }
 
-  // Tự co giãn chiều cao trên màn hình điện thoại
+  // Tự động điều chỉnh trên màn hình di động
   @include respond-to(mobile) {
     height: auto !important;
     overflow: visible;
@@ -41,7 +41,7 @@
 
 // Cột cơ bản trong hệ thống Grid
 .gridcontent {
-  width: $grid-base-col-width; // Mặc định 8.33% = 1 cột trên 12
+  width: $grid-base-col-width; // 8.333% (1/12)
   margin: 0;
   border-right: 1px solid $border-color-grid;
   height: 100%;
@@ -49,32 +49,110 @@
   background-color: $color-grid-default;
   transition: width 0.3s ease;
 
-  // Modifier không viền
+  // Modifiers
   &--no-border {
     border: none !important;
     border-right-color: transparent !important;
   }
 
-  // Khối cột nền trắng
-  &--white-bg {
+  &--white-bg,
+  &--empty {
     background-color: $color-bg-light;
     border: none;
   }
 
-  // Padding cho khối nội dung
   &--padded {
     padding-top: 15px;
   }
+
+  // Tái cấu trúc khối Header
+  &--header {
+    width: 100%;
+    background-color: $color-header;
+    border-right-color: transparent;
+  }
+
+  // Tái cấu trúc khối Footer
+  &--footer {
+    width: 100%;
+    background-color: $color-footer;
+    border-right-color: transparent;
+  }
+
+  // Tái cấu trúc thanh Menu Sidebar trái
+  &--sidebar-left {
+    width: 25%;
+    background-color: $color-bg-light;
+    border: none;
+    padding-top: 15px;
+
+    @include respond-to(mobile) {
+      width: 100% !important;
+      height: auto;
+    }
+  }
+
+  // Tái cấu trúc khối Content Sidebar phải
+  &--sidebar-right {
+    width: 25%;
+    background-color: $color-bg-light;
+    border: none;
+    padding-top: 15px;
+
+    @include respond-to(mobile) {
+      width: 100% !important;
+      height: 120px;
+    }
+  }
 }
 
-// Vòng lặp tự động sinh các class 12 cột: .col-1 -> .col-12
+// Các item con bên trong Sidebar và Content
+.menu-item,
+.menu-item-bar {
+  background-color: $color-accent;
+  border: none;
+  width: 100%;
+  height: 15%;
+  margin-bottom: 10px;
+  border-radius: 2px;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+
+  &:hover {
+    opacity: 0.85;
+    cursor: pointer;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  @include respond-to(mobile) {
+    height: 35px;
+    margin-bottom: 8px;
+  }
+}
+
+.content-box,
+.main-content-block {
+  background-color: $color-accent;
+  border: none;
+  width: 100%;
+  height: 92%;
+  border-radius: 2px;
+
+  @include respond-to(mobile) {
+    height: 100%;
+  }
+}
+
+// Vòng lặp sinh 12 cột tự động
 @for $i from 1 through $grid-columns {
   .col-#{$i} {
     width: col-width($i);
   }
 }
 
-// Cấu trúc lớp phủ Layout chính (Overlay)
+// Lớp phủ layout chính (Overlay)
 .grid-overlay {
   position: absolute;
   opacity: $overlay-opacity;
@@ -91,7 +169,7 @@
   }
 }
 
-// Lưới 12 cột làm mốc hiển thị phía sau (Guide Grid)
+// Lưới 12 cột mốc hiển thị phía sau (Guide Grid)
 .grid-guide {
   opacity: $guide-opacity;
 
@@ -105,6 +183,6 @@
   }
 
   @include respond-to(mobile) {
-    display: none; // Ẩn lưới mốc trên thiết bị di động
+    display: none;
   }
 }
