@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bố Cục 3 Cột - Khánh Bán Bơ Chill</title>
+    <!-- Nhúng CSS của Bootstrap 5.3 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <!-- Nhúng Font Awesome để trang trí icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-light">
+
+    <!-- 1. NAVBAR ĐƠN GIẢN -->
+    <nav class="navbar navbar-dark bg-success shadow-sm">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#"><i class="fas fa-layer-group me-2"></i> Khánh Bán Bơ Chill - Grid & Flexbox</a>
+        </div>
+    </nav>
+
+    <!-- 2. BƯỚC 3: SỬ DỤNG DISPLAY PROPERTY (Ẩn hiện theo kích thước màn hình) -->
+    <!-- Chỉ hiện khối này trên màn hình từ trung bình (md: 768px) trở lên -->
+    <div class="d-none d-md-block bg-warning text-dark text-center p-3 fw-semibold shadow-sm">
+        <i class="fas fa-desktop me-2"></i> Thông báo: Bạn đang xem trên màn hình lớn hơn 768px (Desktop/Tablet). Khối này sẽ tự động ẩn đi trên điện thoại nhỏ!
+    </div>
+
+    <!-- 3. BƯỚC 2: ĐIỀU CHỈNH KHOẢNG CÁCH BẰNG MARGIN & PADDING (my-5, py-3) -->
+    <div class="container my-5 py-3 bg-white rounded shadow-sm">
+        <h3 class="text-center text-success fw-bold mb-4">Khám Phá Các Khu Vực Của Quán</h3>
+        
+        <!-- 4. BƯỚC 1: CẤU TRÚC GRID 3 CỘT KẾT HỢP FLEXBOX -->
+        <div class="row g-4">
+            <!-- Cột 1 -->
+            <div class="col-md-4 d-flex flex-column justify-content-center align-items-center bg-light p-4 rounded border">
+                <div class="fs-1 text-success mb-2"><i class="fas fa-mug-hot"></i></div>
+                <h5 class="fw-bold">Phần 1: Quầy Pha Chế</h5>
+                <p class="text-muted text-center small mb-0">Nơi cho ra đời những ly sinh tố bơ sáp và trà ủ lạnh thơm ngon hảo hạng.</p>
+            </div>
+            
+            <!-- Cột 2 -->
+            <div class="col-md-4 d-flex flex-column justify-content-center align-items-center bg-success p-4 rounded text-white shadow">
+                <div class="fs-1 mb-2"><i class="fas fa-laptop-code"></i></div>
+                <h5 class="fw-bold">Phần 2: Góc Deadline</h5>
+                <p class="text-center small mb-0">Khu vực bàn ngồi riêng tư, có sẵn ổ cắm điện phục vụ sinh viên ICTU học tập.</p>
+            </div>
+            
+            <!-- Cột 3 -->
+            <div class="col-md-4 d-flex flex-column justify-content-center align-items-center bg-light p-4 rounded border">
+                <div class="fs-1 text-success mb-2"><i class="fas fa-users"></i></div>
+                <h5 class="fw-bold">Phần 3: Không Gian Mở</h5>
+                <p class="text-muted text-center small mb-0">Không gian thoáng đãng ngoài trời lý tưởng để trò chuyện cùng bạn bè cuối tuần.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- 5. FOOTER -->
+    <footer class="bg-dark text-white text-center py-4 mt-auto">
+        <div class="container">
+            <p class="mb-0">&copy; 2026 Khánh Bán Bơ Chill. Phổ Yên, Thái Nguyên. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Nhúng JavaScript của Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
