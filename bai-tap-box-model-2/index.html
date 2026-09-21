@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Thực hành Box Model 2</title>
+    <style>
+        /* Định dạng cho hộp div bên ngoài */
+        div {
+           margin: auto; /* Tự động căn giữa hộp ra giữa trang web */
+           padding: 35px;
+           width: 80px;
+           box-shadow: inset 0 0 22px indianred; /* Đổ bóng hắt vào trong (inset) màu đỏ */
+           border-radius: 50%; /* Bo góc 50% sẽ biến hình vuông thành hình tròn hoàn hảo */
+        }
+        
+        /* Định dạng cho hộp div nằm bên trong hộp div ngoài (div > div) */
+        div > div {
+           padding: 0 0px 100px 0px;
+           border-radius: 3%; /* Chỉ bo góc nhẹ 3% */
+           box-shadow: inset 0 0 22px seagreen; /* Đổ bóng hắt vào trong màu xanh lá */
+        }
+    </style>
+</head>
+<body>
+    <h2 style="text-align: center;">Thực hành Box Model 2</h2>
+    
+    <!-- Hộp bên ngoài (hình tròn đỏ) chứa hộp bên trong (hình vuông xanh) -->
+    <div>
+        <div></div>
+    </div>
+    
+</body>
+</html>
