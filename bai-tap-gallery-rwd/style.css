@@ -1,0 +1,65 @@
+/* Đảm bảo padding và border không làm tăng kích thước chiều rộng */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+}
+
+/* Định dạng cho khung chứa mỗi bức ảnh */
+.gallery {
+    border: 1px solid #ccc;
+    background-color: white;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.gallery:hover {
+    border: 1px solid #777;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* Thêm hiệu ứng nổi lên khi di chuột vào */
+}
+
+.gallery img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover; /* Giúp ảnh không bị méo tỷ lệ */
+    display: block;
+}
+
+.desc {
+    padding: 15px;
+    text-align: center;
+    font-weight: bold;
+    color: #2c3e50;
+}
+
+/* 1. MẶC ĐỊNH (Màn hình lớn > 700px): Hiển thị 4 ảnh trên 1 dòng */
+.responsive {
+    padding: 0 6px;
+    float: left;
+    width: 25%; /* 100% chia 4 = 25% */
+    margin-bottom: 15px;
+}
+
+/* Kỹ thuật Clearfix đi kèm với float */
+.clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* 2. MÀN HÌNH VỪA (Nhỏ hơn 700px): Hiển thị 2 ảnh trên 1 dòng */
+@media only screen and (max-width: 700px) {
+    .responsive {
+        width: 50%; /* 100% chia 2 = 50% */
+    }
+}
+
+/* 3. MÀN HÌNH NHỎ (Nhỏ hơn 500px): Hiển thị 1 ảnh trên 1 dòng */
+@media only screen and (max-width: 500px) {
+    .responsive {
+        width: 100%; /* Chiếm toàn bộ chiều ngang */
+    }
+}
