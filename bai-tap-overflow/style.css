@@ -1,0 +1,18 @@
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+}
+
+/* Định dạng hộp chứa nội dung */
+.overflow-box {
+    width: 300px;
+    height: 100px;
+    background-color: lightgray;
+    padding: 10px;
+    border: 2px solid #333;
+    border-radius: 5px;
+    line-height: 1.5;
+    
+    /* Thuộc tính quan trọng nhất: tự động hiển thị thanh cuộn khi nội dung vượt quá 100px chiều cao */
+    overflow: auto; 
+}
