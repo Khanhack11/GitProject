@@ -1,0 +1,51 @@
+/* Thêm box-sizing để padding không làm thay đổi kích thước width */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f4f6f7;
+    margin: 0;
+    padding: 20px;
+}
+
+nav {
+    margin-bottom: 30px;
+    background-color: #fff;
+    padding: 15px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+nav a {
+    display: inline-block;
+    margin: 0 15px;
+    text-decoration: none;
+    color: #27ae60;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #f39c12;
+}
+
+section {
+    margin-top: 20px;
+}
+
+/* Các cột sử dụng inline-block để nằm ngang hàng nhau */
+.box {
+    display: inline-block;
+    width: 30%; /* Mỗi khối chiếm 30% chiều rộng màn hình */
+    padding: 20px;
+    background-color: lightblue;
+    margin: 10px;
+    vertical-align: top; /* Giúp các khối căn bằng mép trên cùng */
+    border-radius: 8px;
+}
+
+footer {
+    margin-top: 40px;
+    color: #7f8c8d;
+}
