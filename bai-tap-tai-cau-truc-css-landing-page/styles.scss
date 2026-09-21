@@ -1,0 +1,16 @@
+// styles.scss - File SCSS chính tương đương
+@import "abstracts/variables";
+@import "abstracts/functions";
+@import "abstracts/mixins";
+
+@import "base/reset";
+@import "base/typography";
+
+@import "layout/grid";
+@import "layout/header";
+
+@import "components/buttons";
+@import "components/products";
+@import "components/stats";
+
+@import "layout/footer";

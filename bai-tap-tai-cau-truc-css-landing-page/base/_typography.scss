@@ -1,0 +1,57 @@
+// base/_typography.scss
+// Định dạng hệ thống kiểu chữ, tiêu đề và phân cấp nội dung
+
+h1, h2, h3, h4 {
+  color: $dark-color;
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+h1 {
+  font-size: 2.75rem;
+  margin-bottom: $spacing-sm;
+
+  @include respond-to(md) {
+    font-size: 2rem;
+  }
+}
+
+h2 {
+  font-size: 2.25rem;
+  margin-bottom: $spacing-sm;
+
+  @include respond-to(md) {
+    font-size: 1.75rem;
+  }
+}
+
+h3 {
+  font-size: 1.35rem;
+  margin-bottom: $spacing-xs;
+}
+
+p {
+  color: $text-muted;
+  margin-bottom: $spacing-sm;
+  font-size: 1.05rem;
+}
+
+.section-header {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 50px;
+
+  .section-tag {
+    display: inline-block;
+    color: $primary-color;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 1.5px;
+    margin-bottom: 8px;
+  }
+
+  p {
+    font-size: 1.1rem;
+  }
+}

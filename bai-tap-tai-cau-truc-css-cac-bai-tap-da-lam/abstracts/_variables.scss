@@ -1,0 +1,45 @@
+// abstracts/_variables.scss
+// Quản lý tập trung toàn bộ biến cấu hình màu sắc, typography, khoảng cách và breakpoints
+
+// 1. Bảng màu giao diện (Color Palette - Khánh Bán Bơ Chill)
+$primary-color: #2e7d32;       // Xanh bơ đậm chủ đạo (Avocado Green)
+$primary-light: #4caf50;       // Xanh lá tươi sáng
+$primary-dark: #1b5e20;        // Xanh rừng thẫm
+$secondary-color: #fbc02d;     // Vàng bơ chín / điểm nhấn ấm áp
+$accent-color: #ff9800;        // Cam năng động
+$dark-color: #212121;          // Màu chữ tối đậm
+$text-muted: #666666;          // Màu chữ phụ
+$bg-light: #f9fbf9;            // Nền trang dịu nhẹ
+$bg-white: #ffffff;            // Nền trắng các card
+$border-color: #e0e0e0;        // Màu viền mờ
+
+// 2. Kích thước & Khoảng cách (Spacing & Sizing)
+$container-max-width: 1200px;
+$section-padding: 70px 0;
+$spacing-xs: 8px;
+$spacing-sm: 16px;
+$spacing-md: 24px;
+$spacing-lg: 32px;
+$spacing-xl: 48px;
+
+// 3. Đường viền & Đổ bóng (Borders & Shadows)
+$radius-sm: 6px;
+$radius-md: 12px;
+$radius-lg: 20px;
+$radius-full: 9999px;
+
+$shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.06);
+$shadow-md: 0 4px 16px rgba(0, 0, 0, 0.1);
+$shadow-lg: 0 10px 30px rgba(0, 0, 0, 0.15);
+$shadow-hover: 0 12px 28px rgba(46, 125, 50, 0.2);
+
+// 4. Hiệu ứng chuyển động (Transitions)
+$transition-fast: 0.2s ease;
+$transition-normal: 0.3s ease;
+$transition-slow: 0.5s ease;
+
+// 5. Điểm ngắt Responsive (Breakpoints)
+$breakpoint-sm: 576px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 992px;
+$breakpoint-xl: 1200px;

@@ -1,0 +1,31 @@
+// components/_buttons.scss
+// Hệ thống nút bấm chuẩn mực sử dụng Mixin SASS
+
+.btn {
+  @include btn-style($primary-color);
+
+  &--secondary {
+    @include btn-style($secondary-color, $dark-color);
+  }
+
+  &--outline {
+    background: transparent;
+    color: $primary-color;
+    border: 2px solid $primary-color;
+
+    &:hover {
+      background-color: $primary-color;
+      color: #ffffff;
+    }
+  }
+
+  &--sm {
+    padding: 8px 18px;
+    font-size: 0.9rem;
+  }
+
+  &--lg {
+    padding: 15px 34px;
+    font-size: 1.1rem;
+  }
+}

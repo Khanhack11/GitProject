@@ -1,0 +1,23 @@
+// main.scss - Tổng hợp toàn bộ kiến trúc SCSS Landing Page theo chuẩn 7-1 pattern
+// Tái cấu trúc từ 4 bài tập: Navigation/Header, Sản phẩm nổi bật, Số liệu thống kê, Footer
+
+// 1. Abstracts (Biến, Hàm, Mixins)
+@import "abstracts/variables";
+@import "abstracts/functions";
+@import "abstracts/mixins";
+
+// 2. Base (Reset, Typography)
+@import "base/reset";
+@import "base/typography";
+
+// 3. Layout (Lưới Grid, Header & Nav)
+@import "layout/grid";
+@import "layout/header";
+
+// 4. Components (Buttons, Sản phẩm nổi bật, Số liệu thống kê)
+@import "components/buttons";
+@import "components/products";
+@import "components/stats";
+
+// 5. Layout Footer
+@import "layout/footer";

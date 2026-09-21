@@ -1,0 +1,67 @@
+// abstracts/_mixins.scss
+// Khai báo các Mixins tái sử dụng xuyên suốt dự án Landing Page
+
+// 1. Flexbox Helpers
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin flex-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+// 2. Mixin Định dạng Card Box
+@mixin card-style($bg: $bg-white, $radius: $radius-md, $shadow: $shadow-md) {
+  background-color: $bg;
+  border-radius: $radius;
+  box-shadow: $shadow;
+  transition: transform $transition-normal, box-shadow $transition-normal;
+
+  &:hover {
+    transform: translateY(-6px);
+    box-shadow: $shadow-hover;
+  }
+}
+
+// 3. Mixin Nút bấm (Button style)
+@mixin btn-style($bg, $color: #ffffff) {
+  display: inline-block;
+  background-color: $bg;
+  color: $color;
+  padding: 12px 26px;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: $radius-full;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  text-align: center;
+  transition: all $transition-normal;
+
+  &:hover {
+    opacity: 0.92;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  }
+
+  &:active {
+    transform: translateY(0);
+  }
+}
+
+// 4. Mixin Responsive Media Queries
+@mixin respond-to($breakpoint) {
+  @if $breakpoint == sm {
+    @media (max-width: $breakpoint-sm) { @content; }
+  } @else if $breakpoint == md {
+    @media (max-width: $breakpoint-md) { @content; }
+  } @else if $breakpoint == lg {
+    @media (max-width: $breakpoint-lg) { @content; }
+  } @else if $breakpoint == xl {
+    @media (max-width: $breakpoint-xl) { @content; }
+  }
+}

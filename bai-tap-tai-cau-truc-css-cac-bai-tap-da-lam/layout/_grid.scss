@@ -1,0 +1,46 @@
+// layout/_grid.scss
+// Hệ thống khung chứa và lưới bố cục trang
+
+.container {
+  width: 100%;
+  max-width: $container-max-width;
+  margin: 0 auto;
+  padding: 0 $spacing-md;
+}
+
+.section {
+  padding: $section-padding;
+
+  &--alt {
+    background-color: #f1f8f2;
+  }
+}
+
+.grid {
+  display: grid;
+  gap: $spacing-lg;
+
+  &--cols-3 {
+    grid-template-columns: repeat(3, 1fr);
+
+    @include respond-to(lg) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include respond-to(sm) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &--cols-4 {
+    grid-template-columns: repeat(4, 1fr);
+
+    @include respond-to(lg) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include respond-to(sm) {
+      grid-template-columns: 1fr;
+    }
+  }
+}

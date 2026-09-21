@@ -1,0 +1,14 @@
+// abstracts/_functions.scss
+// Các hàm tiện ích tính toán trong SASS
+@use "sass:color";
+@use "sass:math";
+
+// Hàm tính toán phần trăm chiều rộng cột
+@function col-width($columns, $total-columns: 12) {
+  @return math.percentage(math.div($columns, $total-columns));
+}
+
+// Hàm làm mờ màu nền
+@function alpha-color($color, $opacity) {
+  @return rgba($color, $opacity);
+}

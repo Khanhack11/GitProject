@@ -1,0 +1,102 @@
+// layout/_footer.scss
+// [Bài tập 4]: Tái cấu trúc Phần Footer của Landing Page
+
+.footer {
+  background-color: #1a1a1a;
+  color: #cccccc;
+  padding: 70px 0 25px;
+
+  .footer-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1.5fr;
+    gap: $spacing-xl;
+    margin-bottom: 50px;
+
+    @include respond-to(lg) {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    @include respond-to(sm) {
+      grid-template-columns: 1fr;
+      gap: $spacing-lg;
+    }
+  }
+
+  .footer-col {
+    h4 {
+      color: #ffffff;
+      font-size: 1.15rem;
+      margin-bottom: $spacing-md;
+      position: relative;
+      padding-bottom: 10px;
+
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 35px;
+        height: 2px;
+        background-color: $secondary-color;
+      }
+    }
+
+    p {
+      color: #999999;
+      font-size: 0.95rem;
+      line-height: 1.6;
+    }
+
+    .footer-links {
+      li {
+        margin-bottom: 10px;
+
+        a {
+          color: #aaaaaa;
+          transition: all $transition-fast;
+          font-size: 0.95rem;
+
+          &:hover {
+            color: $secondary-color;
+            padding-left: 6px;
+          }
+        }
+      }
+    }
+
+    .social-links {
+      display: flex;
+      gap: 12px;
+      margin-top: 15px;
+
+      a {
+        width: 38px;
+        height: 38px;
+        border-radius: 50%;
+        background-color: rgba(255, 255, 255, 0.08);
+        @include flex-center;
+        color: #ffffff;
+        transition: all $transition-normal;
+
+        &:hover {
+          background-color: $primary-color;
+          transform: translateY(-3px);
+        }
+      }
+    }
+  }
+
+  .footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 25px;
+    @include flex-between;
+    font-size: 0.9rem;
+    color: #888888;
+
+    @include respond-to(sm) {
+      flex-direction: column;
+      text-align: center;
+      gap: 10px;
+    }
+  }
+}

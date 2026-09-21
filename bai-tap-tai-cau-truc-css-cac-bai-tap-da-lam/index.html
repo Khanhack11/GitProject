@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Khánh Bán Bơ Chill - Tái Cấu Trúc Landing Page bằng SASS</title>
+  <!-- Liên kết CSS được biên dịch từ SASS (Sass 7-1 pattern) -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- =========================================================================
+       PHẦN 1: NAVIGATION & HEADER CỦA LANDING PAGE
+       ========================================================================= -->
+  <nav class="navbar">
+    <div class="container nav-container">
+      <a href="#" class="brand-logo">
+        <span class="emoji">🥑</span>
+        <span>Khánh Bán Bơ Chill</span>
+      </a>
+      <ul class="nav-menu">
+        <li><a href="#home">Trang chủ</a></li>
+        <li><a href="#products">Sản phẩm nổi bật</a></li>
+        <li><a href="#stats">Số liệu ấn tượng</a></li>
+        <li><a href="#about">Về chúng tôi</a></li>
+        <li><a href="#contact">Liên hệ</a></li>
+      </ul>
+      <a href="#products" class="btn btn--sm">Đặt Món Ngay</a>
+    </div>
+  </nav>
+
+  <header class="hero" id="home">
+    <div class="container hero-content">
+      <div class="hero-text">
+        <span class="badge-hero">NÔNG SẢN TƯƠI SẠCH TÂY NGUYÊN</span>
+        <h1>Sinh Tố Bơ Thượng Hạng <br><span class="highlight">Giải Tỏa Deadline</span> Cho Sinh Viên</h1>
+        <p class="hero-desc">
+          Thưởng thức vị béo ngậy nguyên chất từ những trái bơ sáp Đắk Lắk được tuyển chọn kỹ lưỡng. Không gian chill lý tưởng tiếp thêm năng lượng học tập và sáng tạo tại Thái Nguyên.
+        </p>
+        <div class="hero-actions">
+          <a href="#products" class="btn btn--lg">Khám Phá Menu</a>
+          <a href="#stats" class="btn btn--outline btn--lg">Xem Thống Kê</a>
+        </div>
+      </div>
+      <div class="hero-image">
+        <div class="hero-img-box">
+          <img src="https://images.unsplash.com/photo-1546173159-315724a31696?w=700&auto=format&fit=crop&q=80" alt="Sinh tố bơ thơm ngon">
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- =========================================================================
+       PHẦN 2: SẢN PHẨM NỔI BẬT CỦA LANDING PAGE
+       ========================================================================= -->
+  <section class="section section--alt" id="products">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Thực Đơn Độc Quyền</span>
+        <h2>Sản Phẩm Nổi Bật Được Yêu Thích</h2>
+        <p>Những món nước & đồ ăn nhẹ được chế biến từ 100% nguyên liệu tự nhiên tươi mới mỗi ngày.</p>
+      </div>
+
+      <div class="grid grid--cols-3">
+        <!-- Sản phẩm 1 -->
+        <div class="product-card">
+          <span class="product-badge product-badge--hot">Best Seller</span>
+          <div class="product-image">
+            <img src="https://images.unsplash.com/photo-1553530666-ba11a7da3888?w=500&auto=format&fit=crop&q=80" alt="Sinh Tố Bơ Sáp Đặc Biệt">
+          </div>
+          <div class="product-body">
+            <div class="product-rating">★★★★★ (4.9/5)</div>
+            <h3 class="product-title">Sinh Tố Bơ Sáp Đặc Biệt</h3>
+            <p class="product-desc">Bơ sáp 034 xay mịn kết hợp sữa chua Hy Lạp và nước cốt dừa thơm béo chuẩn vị cao nguyên.</p>
+            <div class="product-footer">
+              <span class="product-price">35.000₫</span>
+              <a href="#contact" class="btn btn--sm">Thêm Món</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Sản phẩm 2 -->
+        <div class="product-card">
+          <span class="product-badge product-badge--best">Món Mới</span>
+          <div class="product-image">
+            <img src="https://images.unsplash.com/photo-1517256064527-09c73fc73e38?w=500&auto=format&fit=crop&q=80" alt="Cà Phê Muối Bơ Chill">
+          </div>
+          <div class="product-body">
+            <div class="product-rating">★★★★★ (5.0/5)</div>
+            <h3 class="product-title">Cà Phê Muối Kem Bơ</h3>
+            <p class="product-desc">Sự hòa quyện táo bạo giữa cà phê pha phin truyền thống và lớp kem bơ mằn mặn độc quyền.</p>
+            <div class="product-footer">
+              <span class="product-price">32.000₫</span>
+              <a href="#contact" class="btn btn--sm">Thêm Món</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Sản phẩm 3 -->
+        <div class="product-card">
+          <span class="product-badge">Thanh Nhiệt</span>
+          <div class="product-image">
+            <img src="https://images.unsplash.com/photo-1556881286-fc6915169721?w=500&auto=format&fit=crop&q=80" alt="Trà Trái Cây Nhiệt Đới">
+          </div>
+          <div class="product-body">
+            <div class="product-rating">★★★★☆ (4.8/5)</div>
+            <h3 class="product-title">Trà Dâu Tằm Bơ Lát</h3>
+            <p class="product-desc">Trà oolong hảo hạng kết hợp vị chua thanh mát của dâu tằm và những lát bơ tươi giòn ngọt.</p>
+            <div class="product-footer">
+              <span class="product-price">30.000₫</span>
+              <a href="#contact" class="btn btn--sm">Thêm Món</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       PHẦN 3: SỐ LIỆU THỐNG KÊ CỦA LANDING PAGE
+       ========================================================================= -->
+  <section class="stats" id="stats">
+    <div class="container">
+      <div class="grid grid--cols-4">
+        <!-- Thống kê 1 -->
+        <div class="stat-card">
+          <span class="stat-icon">🥑</span>
+          <div class="stat-number">15,000+</div>
+          <div class="stat-title">Ly Bơ Phục Vụ</div>
+          <p class="stat-desc">Được giao tận tay sinh viên trong năm qua</p>
+        </div>
+
+        <!-- Thống kê 2 -->
+        <div class="stat-card">
+          <span class="stat-icon">⭐</span>
+          <div class="stat-number">99.6%</div>
+          <div class="stat-title">Đánh Giá 5 Sao</div>
+          <p class="stat-desc">Mức độ hài lòng về chất lượng và không gian</p>
+        </div>
+
+        <!-- Thống kê 3 -->
+        <div class="stat-card">
+          <span class="stat-icon">🚀</span>
+          <div class="stat-number">15 Phút</div>
+          <div class="stat-title">Giao Nhanh Thần Tốc</div>
+          <p class="stat-desc">Freeship nội khu ký túc xá và khuôn viên trường</p>
+        </div>
+
+        <!-- Thống kê 4 -->
+        <div class="stat-card">
+          <span class="stat-icon">💚</span>
+          <div class="stat-number">24/7</div>
+          <div class="stat-title">Đồng Hành Deadline</div>
+          <p class="stat-desc">Luôn sẵn sàng phục vụ mùa thi cử</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       PHẦN 4: FOOTER CỦA LANDING PAGE
+       ========================================================================= -->
+  <footer class="footer" id="contact">
+    <div class="container">
+      <div class="footer-grid">
+        <!-- Cột 1: Thông tin thương hiệu -->
+        <div class="footer-col">
+          <h4>🥑 Khánh Bán Bơ Chill</h4>
+          <p>
+            Chuỗi đồ uống dinh dưỡng và không gian làm việc sáng tạo hàng đầu dành cho sinh viên CNTT & Truyền thông (ICTU) tại Thái Nguyên.
+          </p>
+          <div class="social-links">
+            <a href="#" title="Facebook">f</a>
+            <a href="#" title="Instagram">in</a>
+            <a href="#" title="TikTok">tik</a>
+            <a href="#" title="YouTube">yt</a>
+          </div>
+        </div>
+
+        <!-- Cột 2: Danh mục liên kết -->
+        <div class="footer-col">
+          <h4>Về Menu</h4>
+          <ul class="footer-links">
+            <li><a href="#products">Sinh tố bơ sáp</a></li>
+            <li><a href="#products">Cà phê kem bơ</a></li>
+            <li><a href="#products">Trà trái cây tươi</a></li>
+            <li><a href="#products">Combo sinh viên</a></li>
+          </ul>
+        </div>
+
+        <!-- Cột 3: Hỗ trợ khách hàng -->
+        <div class="footer-col">
+          <h4>Hỗ Trợ</h4>
+          <ul class="footer-links">
+            <li><a href="#">Hướng dẫn đặt món</a></li>
+            <li><a href="#">Chính sách giao hàng</a></li>
+            <li><a href="#">Ưu đãi thành viên</a></li>
+            <li><a href="#">Đặt bàn học nhóm</a></li>
+          </ul>
+        </div>
+
+        <!-- Cột 4: Thông tin liên hệ -->
+        <div class="footer-col">
+          <h4>Liên Hệ Trực Tiếp</h4>
+          <p>📍 Địa chỉ: Cổng trường ICTU, Quyết Thắng, TP. Thái Nguyên</p>
+          <p>📞 Hotline / Zalo: 0988.xxx.xxx</p>
+          <p>⏰ Giờ mở cửa: 07:00 - 23:00 hàng ngày</p>
+        </div>
+      </div>
+
+      <!-- Phần bản quyền đáy trang -->
+      <div class="footer-bottom">
+        <p>&copy; 2026 Khánh Bán Bơ Chill. All rights reserved.</p>
+        <p>Dự án thực hành: Tái cấu trúc mã CSS của các bài tập đã làm sang SASS theo chuẩn 7-1 pattern.</p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

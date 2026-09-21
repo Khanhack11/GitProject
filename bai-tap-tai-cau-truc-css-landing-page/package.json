@@ -1,0 +1,18 @@
+{
+  "name": "bai-tap-tai-cau-truc-css-cac-bai-tap-da-lam",
+  "version": "1.0.0",
+  "description": "Tai cau truc ma CSS cua cac bai tap da lam (Landing Page) sang SASS 7-1 pattern",
+  "scripts": {
+    "build": "sass main.scss css/style.css",
+    "watch": "sass --watch main.scss:css/style.css"
+  },
+  "keywords": [
+    "sass",
+    "scss",
+    "landing-page",
+    "refactor",
+    "codegym"
+  ],
+  "author": "",
+  "license": "ISC"
+}
