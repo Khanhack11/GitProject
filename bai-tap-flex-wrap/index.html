@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS flex-wrap - Khánh Bán Bơ Chill</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h2>Thực hành: CSS flex-wrap</h2>
+    <p>Khung viền đứt màu xám có chiều rộng cố định là <strong>400px</strong>. Mỗi món đồ uống được cài đặt rộng <strong>150px</strong> (3 món = 450px). Vì 450px > 400px nên đã xảy ra hiện tượng thiếu chỗ.</p>
+
+    <h3>1. flex-wrap: nowrap (Mặc định)</h3>
+    <p>Thuộc tính này bắt buộc các phần tử phải nằm trên 1 dòng. Dù đã cài đặt rộng 150px, chúng vẫn <strong>bị ép nhỏ lại</strong> để vừa khít 400px.</p>
+    <div class="flex-container nowrap">
+        <div class="flex-item">Sinh tố bơ</div>
+        <div class="flex-item">Nước dừa tươi</div>
+        <div class="flex-item">Trà Shan Tuyết</div>
+    </div>
+
+    <h3>2. flex-wrap: wrap</h3>
+    <p>Khi hết chỗ, phần tử thứ 3 sẽ <strong>tự động rớt xuống dòng dưới</strong>, giữ nguyên được kích thước chuẩn 150px.</p>
+    <div class="flex-container wrap">
+        <div class="flex-item">Sinh tố bơ</div>
+        <div class="flex-item">Nước dừa tươi</div>
+        <div class="flex-item">Trà Shan Tuyết</div>
+    </div>
+
+    <h3>3. flex-wrap: wrap-reverse</h3>
+    <p>Phần tử thiếu chỗ cũng bị rớt dòng, nhưng thay vì rớt xuống dưới, nó lại <strong>trồi lên trên</strong> (đảo ngược dòng).</p>
+    <div class="flex-container wrap-reverse">
+        <div class="flex-item">Sinh tố bơ</div>
+        <div class="flex-item">Nước dừa tươi</div>
+        <div class="flex-item">Trà Shan Tuyết</div>
+    </div>
+</body>
+</html>

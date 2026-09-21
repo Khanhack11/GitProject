@@ -1,0 +1,54 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f6f7;
+    padding: 20px;
+    line-height: 1.5;
+    color: #333;
+}
+
+h3 {
+    color: #27ae60;
+    margin-top: 30px;
+}
+
+/* Khung chứa các phần tử (Cố định 400px để ép thiếu chỗ) */
+.flex-container {
+    display: flex;
+    width: 400px;
+    background-color: #fff;
+    border: 2px dashed #bdc3c7;
+    padding: 10px;
+    gap: 10px; /* Khoảng cách giữa các phần tử */
+}
+
+/* Các phần tử bên trong */
+.flex-item {
+    width: 150px;
+    height: 60px;
+    background-color: #d5f5e3;
+    border: 1px solid #27ae60;
+    display: flex;
+    align-items: center; /* Căn giữa chữ theo chiều dọc */
+    justify-content: center; /* Căn giữa chữ theo chiều ngang */
+    font-weight: bold;
+    color: #2c3e50;
+    text-align: center;
+    border-radius: 5px;
+}
+
+/* --- ÁP DỤNG FLEX-WRAP --- */
+.nowrap {
+    flex-wrap: nowrap; /* Bóp méo để nằm trên 1 dòng */
+}
+
+.wrap {
+    flex-wrap: wrap; /* Cho phép rớt xuống dòng */
+}
+
+.wrap-reverse {
+    flex-wrap: wrap-reverse; /* Cho phép rớt dòng nhưng đẩy hướng lên trên */
+}
