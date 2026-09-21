@@ -1,0 +1,41 @@
+/* Sử dụng Box Model để padding không làm phình to kích thước các cột */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+}
+
+/* Container bọc ngoài toàn bộ bố cục */
+.container {
+    width: 100%;
+    border: 2px dashed #333; /* Thêm viền đứt để bạn dễ hình dung giới hạn của container */
+    padding: 10px;
+}
+
+/* Cột bên trái chiếm 60% và nổi sang trái */
+.left-column {
+    width: 60%;
+    float: left;
+    background-color: lightblue;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+/* Cột bên phải chiếm 38% và nổi sang phải (còn dư 2% làm khoảng trống ở giữa) */
+.right-column {
+    width: 38%;
+    float: right;
+    background-color: lightgreen;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+/* Kỹ thuật Clearfix xử lý lỗi tràn bố cục do float gây ra */
+.container::after {
+    content: "";
+    display: block;
+    clear: both;
+}
