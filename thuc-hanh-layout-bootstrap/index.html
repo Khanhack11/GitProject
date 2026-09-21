@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang Chủ - Khánh Bán Bơ Chill</title>
+    <!-- Nhúng CSS của Bootstrap 5.3 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <!-- Nhúng thư viện Font Awesome để dùng icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- 1. NAVBAR TÍCH HỢP FONT AWESOME -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-success shadow-sm fixed-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#"><i class="fas fa-mug-hot me-2"></i> Khánh Bán Bơ Chill</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" href="#"><i class="fas fa-home me-1"></i> Trang Chủ</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about"><i class="fas fa-info-circle me-1"></i> Giới Thiệu</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#services"><i class="fas fa-concierge-bell me-1"></i> Dịch Vụ</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact"><i class="fas fa-envelope me-1"></i> Liên Hệ</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 2. HERO SECTION VỚI CAROUSEL (Slider hình ảnh) -->
+    <!-- Đẩy khoảng cách top xuống một chút để tránh bị navbar che khuất -->
+    <div id="heroCarousel" class="carousel slide shadow-sm" data-bs-ride="carousel" style="margin-top: 56px;">
+        <div class="carousel-inner">
+            <div class="carousel-item active" style="height: 500px;">
+                <img src="https://images.unsplash.com/photo-1551024709-8f23befc6f87?w=1400" class="d-block w-100 h-100 object-fit-cover" alt="Slide 1">
+                <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded p-3">
+                    <h2 class="fw-bold">Sinh Tố Bơ Sáp Nguyên Chất</h2>
+                    <p>Thơm ngon béo ngậy, nạp năng lượng tuyệt vời cho ngày mới.</p>
+                </div>
+            </div>
+            <div class="carousel-item" style="height: 500px;">
+                <img src="https://images.unsplash.com/photo-1544787219-7f47ccb76574?w=1400" class="d-block w-100 h-100 object-fit-cover" alt="Slide 2">
+                <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded p-3">
+                    <h2 class="fw-bold">Không Gian Chill Hết Nấc</h2>
+                    <p>Góc làm việc và học tập lý tưởng dành riêng cho sinh viên ICTU.</p>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </button>
+    </div>
+
+    <!-- 3. SECTION SỬ DỤNG FLEXBOX CĂN GIỮA -->
+    <section id="about" class="d-flex justify-content-center align-items-center bg-light py-5 text-center">
+        <div class="container py-4">
+            <h2 class="text-success fw-bold mb-3"><i class="fas fa-heart text-danger me-2"></i> Chào mừng đến với Khánh Bán Bơ Chill!</h2>
+            <p class="text-muted lead px-md-5 mx-auto" style="max-width: 800px;">Nơi hội tụ của những tín đồ yêu thích đồ uống sạch và không gian sáng tạo. Chúng tôi cam kết mang lại trải nghiệm tuyệt vời nhất cho mỗi vị khách ghé thăm.</p>
+        </div>
+    </section>
+
+    <!-- 4. CONTACT FORM VỚI BOOTSTRAP FORM -->
+    <section id="contact" class="container py-5">
+        <div class="row justify-content-center">
+            <div class="col-md-8 col-lg-6">
+                <div class="card shadow border-0 p-4 rounded-4">
+                    <h3 class="text-center text-success fw-bold mb-4"><i class="fas fa-paper-plane me-2"></i> Gửi Tin Nhắn Cho Chúng Tôi</h3>
+                    <form>
+                        <div class="mb-3">
+                            <label for="name" class="form-label fw-semibold">Tên của bạn</label>
+                            <input type="text" class="form-control" id="name" placeholder="Nhập tên của bạn">
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label fw-semibold">Email</label>
+                            <input type="email" class="form-control" id="email" placeholder="name@example.com">
+                        </div>
+                        <div class="mb-3">
+                            <label for="message" class="form-label fw-semibold">Nội dung</label>
+                            <textarea class="form-control" id="message" rows="4" placeholder="Nhập lời nhắn..."></textarea>
+                        </div>
+                        <div class="d-grid">
+                            <button type="submit" class="btn btn-success btn-lg fw-bold">Gửi Đi</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. FOOTER -->
+    <footer class="bg-dark text-white text-center py-4">
+        <div class="container">
+            <p class="mb-0">&copy; 2026 Khánh Bán Bơ Chill. Phổ Yên, Thái Nguyên. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Nhúng JavaScript của Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
