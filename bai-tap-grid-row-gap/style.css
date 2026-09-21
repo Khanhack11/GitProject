@@ -1,0 +1,50 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f6f7;
+    padding: 20px;
+    line-height: 1.5;
+}
+
+h3 {
+    color: #27ae60;
+    margin-top: 30px;
+}
+
+/* Khung chứa lưới gồm 2 cột (Cột tên món và Cột giá tiền) */
+.grid-container {
+    display: grid;
+    grid-template-columns: 2fr 1fr; /* Cột món rộng gấp đôi cột giá */
+    background-color: #fff;
+    padding: 20px;
+    border: 2px dashed #bdc3c7;
+    height: 300px; /* Đặt chiều cao tĩnh để thấy rõ hiệu ứng phần trăm (%) */
+}
+
+/* Định dạng cơ bản cho các ô */
+.grid-item {
+    background-color: #d5f5e3;
+    border: 1px solid #27ae60;
+    padding: 15px;
+    font-weight: bold;
+    font-size: 16px;
+    color: #2c3e50;
+    display: flex;
+    align-items: center; /* Căn giữa chữ theo chiều dọc */
+}
+
+/* --- THỰC HÀNH GRID-ROW-GAP --- */
+
+/* 1. Length: Khoảng cách cố định bằng Pixel */
+.gap-length {
+    grid-row-gap: 30px;
+}
+
+/* 2. Percentage: Khoảng cách tính theo % chiều cao của .grid-container */
+.gap-percentage {
+    grid-row-gap: 10%; 
+}
+
+/* 3. Global: Khôi phục về giá trị khởi tạo (mặc định là 0) */
+.gap-global {
+    grid-row-gap: initial; 
+}

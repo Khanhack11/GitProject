@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS grid-row-gap - Khánh Bán Bơ Chill</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h2>Thực hành: CSS grid-row-gap</h2>
+    <p>Thuộc tính này chuyên dùng để tạo khoảng cách (khe hở) giữa các <strong>hàng ngang</strong> trong một lưới. Hãy quan sát menu dưới đây:</p>
+
+    <h3>1. Giá trị Length (Ví dụ: 30px)</h3>
+    <p>Khoảng cách giữa các hàng được cố định bằng một thông số cụ thể (30px).</p>
+    <div class="grid-container gap-length">
+        <div class="grid-item">Sinh tố bơ (Cỡ L)</div>
+        <div class="grid-item">35.000đ</div>
+        <div class="grid-item">Nước dừa tươi</div>
+        <div class="grid-item">25.000đ</div>
+        <div class="grid-item">Trà Shan Tuyết</div>
+        <div class="grid-item">40.000đ</div>
+    </div>
+
+    <h3>2. Giá trị Percentage (Ví dụ: 10%)</h3>
+    <p>Khoảng cách giữa các hàng thay đổi linh hoạt theo phần trăm chiều cao của phần tử bao bọc nó.</p>
+    <div class="grid-container gap-percentage">
+        <div class="grid-item">Sinh tố bơ (Cỡ L)</div>
+        <div class="grid-item">35.000đ</div>
+        <div class="grid-item">Nước dừa tươi</div>
+        <div class="grid-item">25.000đ</div>
+        <div class="grid-item">Trà Shan Tuyết</div>
+        <div class="grid-item">40.000đ</div>
+    </div>
+
+    <h3>3. Giá trị Global (Ví dụ: initial)</h3>
+    <p>Sử dụng giá trị mặc định của trình duyệt (thường khoảng cách sẽ là 0, các hàng dính sát vào nhau).</p>
+    <div class="grid-container gap-global">
+        <div class="grid-item">Sinh tố bơ (Cỡ L)</div>
+        <div class="grid-item">35.000đ</div>
+        <div class="grid-item">Nước dừa tươi</div>
+        <div class="grid-item">25.000đ</div>
+        <div class="grid-item">Trà Shan Tuyết</div>
+        <div class="grid-item">40.000đ</div>
+    </div>
+</body>
+</html>
