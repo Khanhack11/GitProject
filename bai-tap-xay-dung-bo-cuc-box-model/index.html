@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="utf-8">
+    <title>Xây dựng bố cục Box Model</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h2>So sánh Content-box và Border-box</h2>
+    
+    <!-- Bọc các thẻ vào một container để dùng nth-child chính xác -->
+    <div class="container">
+        <div class="card">
+            Thẻ 1 (Content-box): Thẻ này bị phình to ra vì tổng kích thước = 280px + padding 40px + border 10px.
+        </div>
+        
+        <div class="card">
+            Thẻ 2 (Border-box): Kích thước giữ chuẩn 280x150. Padding và border bị ép vào bên trong.
+        </div>
+        
+        <div class="card">
+            Thẻ 3 (Border-box): Tương tự thẻ 2. Đây là cách chuẩn nhất để không bị vỡ giao diện.
+        </div>
+    </div>
+</body>
+</html>
